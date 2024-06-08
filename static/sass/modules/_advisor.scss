@@ -1,0 +1,165 @@
+.advisor-area {    
+    .sec-title {
+        margin-bottom: 38px;
+        h2,
+        p {
+            margin: 0;
+        }
+        h2 {
+            font-family: 'Poppins';
+            font-weight: 600;
+            color: #242424;
+            line-height: 36px;
+            font-size: 34px;
+        }
+        p {
+            margin: 0;
+            font-family: 'Poppins';
+            font-size: 20px;
+            line-height: 28px;
+            color: #242424;
+            margin-top: 13px;
+        }
+        .line {
+            display: inline-block;
+            width: 40px;
+            height: 2px;
+            background: #787dff;
+        }
+    }
+    .sec-title.two {
+        p {
+            margin: 0;
+            font-size: 17px;
+            line-height: 28px;
+            color: #797979;
+            font-family: 'Lato';
+            font-weight: normal;
+            letter-spacing: 0;
+            margin-top: 11px;
+        }
+        a {
+            color: #686ef8;
+            font-family: 'Poppins';
+            font-weight: 600;
+            font-size: 16px;
+            display: inline-block;
+            border-bottom: 1px solid #686ef8;
+            line-height: 28px;
+            margin-top: 14px;
+        }
+    }
+    .advisor-content-wrapper {
+        margin-top: -38px;
+    }
+    .single-advisor {
+        margin-top: 38px;
+        .img-box {
+            position: relative;
+            margin-bottom: 18px;
+            overflow: hidden;
+            > img {transform: scale(1);transition: all .4s ease;}
+            img {
+                width: 100%;
+            }
+            &:hover {
+                > img {transform: scale(1.1);}
+                .overlay {
+                    opacity: 1;
+                }
+            }
+            .overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(#3E56AA, .85);
+                opacity: 0;
+                transition: all .4s ease;
+                .box {
+                    width: 100%;
+                    height: 100%;
+                    display: table;
+                    .content {
+                        display: table-cell;
+                        vertical-align: bottom;
+                        padding-bottom: 30px;
+                        a {
+                            font-size: 22px;
+                            color: #fff;
+                            +a {
+                                margin-left: 21px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        h3 {
+            margin: 0;
+            font-family: 'Poppins';
+            font-size: 18px;
+            line-height: 22px;
+            color: #242424;
+        }
+        span {
+            font-family: 'Poppins';
+            font-weight: 500;
+            color: #797979;
+            font-size: 15px;
+            line-height: 22px;
+            display: inline-block;
+        }
+    }
+    &.home-page-one {
+        padding-top: 0;
+        padding-bottom: 0;
+        
+        .single-advisor {
+            margin-top: 0;
+        }
+        .thm-container {border-bottom: 1px solid #cecece;padding-bottom: 90px;}
+    }
+    &.home-page-two {
+        padding-bottom: 85px;
+        .single-advisor {
+            margin-top: 0;
+        }
+        .thm-container {border-bottom: 0;}
+    }
+    &.home-page-four {
+        padding-top: 100px;
+    }
+    &.about-page {
+        .sec-title {
+            margin-bottom: 8px;
+            h2,
+            p {
+                margin: 0;
+            }
+            h2 {
+                font-family: 'Poppins';
+                font-weight: 600;
+                color: #242424;
+                line-height: 36px;
+                font-size: 34px;
+                &:after {content:'';display: inline-block; width: 40px; height: 2px; background: #787dff;margin-left: 15px;}
+            }
+            p {
+                margin: 0;
+                font-size: 17px;
+                line-height: 28px;
+                color: #797979;
+                font-family: 'Lato';
+                font-weight: normal;
+                letter-spacing: 0;
+                margin-top: 11px;
+            }
+        }
+        a.view-more {color: #686ef8; font-family: 'Poppins'; font-weight: 600; font-size: 16px; display: inline-block; border-bottom: 1px solid #686ef8; line-height: 28px;margin-top: 40px;}
+    }
+    &.team-page {
+        padding-bottom: 90px;
+    }
+}

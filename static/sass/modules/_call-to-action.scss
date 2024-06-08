@@ -1,0 +1,15 @@
+.call-to-action {
+	background: #262626 url(../img/call-to-action-bg.jpg) center center no-repeat fixed;
+	background-size: cover;
+	padding-top: 94px;
+	padding-bottom: 75px;
+	position: relative;
+	&:after {content: '';position: absolute;top:0;left: 0;right: 0;bottom: 0;background:#2E2E2F;opacity: .7;}
+	.thm-container {position: relative;z-index: 10;}
+	h2,p {margin: 0;color: #fff;}
+	h2 {font-family: 'Poppins';font-weight: 600;font-size: 45px;line-height: 56px;letter-spacing: 0;}
+	p {font-family: 'Poppins';font-size: 24px;line-height: 1em;letter-spacing: 0;margin-top: 20px;}
+	a.thm-btn {display: inline-block;background:#3E56AA;letter-spacing: 0;color: #fff;font-family: 'Poppins';font-weight: 600;font-size: 16px;line-height: 1em;border-radius: 30px;padding: 16px 48px;transition: all .4s ease;margin-top: 20px;
+		&:hover {color: #3E56AA;background:#fff;}
+	}
+}

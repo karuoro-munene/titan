@@ -1,0 +1,36 @@
+#contact-page-google-map {
+	width: 100%;
+	height: 465px;
+}
+.contact-page {padding-top: 100px;padding-bottom: 100px;
+	.sec-title {margin-bottom: 48px;
+		.tag-line {font-family: 'Playfair Display';font-size: 20px;color: #222222;font-style: italic;letter-spacing: 0;line-height: 1em;margin-bottom: 20px;
+			&:after {content: '';width: 35px;height: 2px;background:#3E56AA;display: inline-block;margin-left: 20px;}
+		}
+		h2 {font-family: 'Poppins';font-weight: 600;color: #242424;font-size: 35px;line-height: 1em;letter-spacing: 0;margin: 0;margin-bottom: 20px;
+			span {color: #3E56AA;}
+		}
+		p {color: #666666;letter-spacing: 0;font-family: 'Open Sans';font-size: 16px;line-height: 26px;margin: 0;}
+	}
+	.contact-form {padding-right: 40px;
+		p.note {color: #A7A7A7;font-family: 'Open Sans';font-size: 15px;line-height: 28px;margin: 0;letter-spacing: 0;margin-bottom: 40px;}
+		label.input-label {color: #797979;font-family: 'Poppins';font-weight: normal;font-size: 16px;line-height: 1em;margin: 0;display: block;}
+		label.error {display: none !important;}
+		input.error,textarea.error {background:rgba(red,.3);border-color: red;}
+		input,textarea {display: block;width: 100%;border: none;border-bottom: 1px solid #cdcdcd;outline: none;}
+		input {margin-bottom: 50px;}
+		textarea {height: 135px;}
+		button[type=submit] {padding: 0;width: 189px;height: 52px;border: none;outline:none;border: 2px solid #3E56AA;line-height: 48px;font-size: 16px;font-weight: 600;font-family: 'Montserrat';color: #3E56AA;text-align: center;border-radius: 30px;background-color: transparent;margin-top: 50px;transition: all .4s ease;
+			&:hover {color: #fff;background:#3E56AA;}
+		}
+	}
+	.contact-info {padding-left: 40px;
+		.inner {background:#3E56AA;padding-top: 60px;padding-bottom: 60px;padding-left: 50px;padding-right: 46px;}
+		.single-contact-info {
+			+ .single-contact-info {margin-top: 60px;}
+			h4, p {margin: 0;}
+			h4 {text-transform: uppercase;color: #fff;font-family: 'Montserrat';font-weight: 700;font-size: 15px;line-height: 1em;letter-spacing: 0;}
+			p {color: #fff;font-family: 'Montserrat';font-weight: 500;font-size: 20px;line-height: 27px;letter-spacing: 0;margin-top: 20px;}
+		}
+	}
+}

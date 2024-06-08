@@ -1,0 +1,12 @@
+.ceo-message-area {
+	padding-top: 100px;
+	.ceo-message-content {
+		padding-left: 55px;
+		padding-top: 35px;
+		h3, p {margin: 0;}
+		h3 {color: #242424;font-family: 'Poppins';font-weight: 600;font-size: 35px;line-height: 1em;margin-bottom: 15px;}
+		p {font-family: 'Open Sans';color: #797979;font-size: 16px;line-height: 26px;letter-spacing: 0;}
+		p.highlighted {font-family: 'Lora';font-size: 20px;line-height: 28px;color: #242424;letter-spacing: .02em;font-style: italic;margin-bottom: 28px;}
+		img.sign-img {margin-top: 40px;}
+	}
+}

@@ -1,0 +1,52 @@
+.about-home-one {
+	padding: 100px 0;
+	h2,p {margin: 0;}
+	.sec-title {margin-bottom: 38px;
+		.tag-line {font-family: 'Playfair Display';font-size: 20px;color: #222222;font-style: italic;letter-spacing: 0;line-height: 1em;margin-bottom: 23px;
+			&:after {content: '';width: 35px;height: 2px;background:#5773d9;display: inline-block;margin-left: 20px;}
+		}
+		h2 {font-family: 'Poppins';font-weight: 600;color: #242424;font-size: 35px;line-height: 1em;letter-spacing: 0;
+			span {color: #3E56AA;}
+		}
+	}
+	p {font-family: 'Open Sans';font-size: 16px;line-height: 26px;color: #666666;letter-spacing: 0;}
+	p + p {margin-top: 25px;}
+	p.highlight {color: #222222;font-family: 'Lora';font-size: 20px;line-height: 30px;font-style: italic;}
+	a.more-btn {display: inline-block;border: 2px solid #3E56AA;border-radius: 30px;width: 175px;height: 45px;text-align: center;font-family: 'Poppins';font-weight: 500;letter-spacing: 0;line-height: 41px;font-size: 15px;margin-top: 40px;transition: all .4s ease;color: #3E56AA;
+		&:hover {color: #fff;background:#3E56AA;}
+	}
+}
+
+.about-section.about-page {
+	padding-bottom: 100px;
+	padding-top: 100px;
+	.is-overlaped {
+		padding-bottom: 0;
+	}
+	h2,p {margin: 0;}
+	.sec-title {margin-bottom: 38px;
+		.tag-line {font-family: 'Playfair Display';font-size: 20px;color: #222222;font-style: italic;letter-spacing: 0;line-height: 1em;margin-bottom: 23px;
+			&:after {content: '';width: 35px;height: 2px;background:#3E56AA;display: inline-block;margin-left: 20px;}
+		}
+		h2 {font-family: 'Poppins';font-weight: 600;color: #242424;font-size: 35px;line-height: 1em;letter-spacing: 0;
+			span {color: #3E56AA;}
+		}
+	}
+	p {font-family: 'Open Sans';font-size: 16px;line-height: 26px;color: #666666;letter-spacing: 0;}
+	p + p {margin-top: 25px;}
+	p.highlight {color: #222222;font-family: 'Lora';font-size: 20px;line-height: 30px;font-style: italic;}
+	.content-box {margin-bottom: 50px;}
+}
+
+.about-home-two {
+	background:#F4F4F4;
+	.about-content {
+		h2, h3, p {margin: 0;}
+		h2 {font-size: 35px;line-height: 1em;font-family: 'Poppins';color: #242424;font-weight: 600;margin-bottom: 20px;
+			span {color: #3E56AA;}
+		}
+		h3 {font-family: 'Poppins';color: #242424;font-weight: 600;font-size: 28px;line-height: 1em;margin-top: 40px;margin-bottom: 10px;}
+		p {color: #666666;font-family: 'Open Sans';line-height: 26px;font-size: 16px;letter-spacing: 0;}
+		p.highlight {color: #222222;font-family: 'Lora';font-size: 20px;line-height: 30px;font-style: italic;margin-bottom: 20px;}
+	}
+}

@@ -1,0 +1,481 @@
+.accrodion+.accrodion {
+    // margin-top: 20px;
+    border-top: 1px solid #dfdfdf;
+}
+
+.accrodion {
+    // border: 1px solid #e5e5e5;
+}
+
+.accrodion .accrodion-title {
+    // padding: 22px 50px;
+    position: relative;
+    cursor: pointer;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.accrodion .accrodion-title h4 {
+    font-size: 20px;
+    color: #242424;
+    margin: 0;
+    font-family: 'Poppins';
+    font-weight: 500;
+}
+
+.accrodion .accrodion-title h4:before {
+    // content: '\f067';
+    content: '+';
+    font-family: 'Poppins';
+    color: #242424;
+    font-size: 24px; // position: absolute;
+    // top: 18px;
+    // left: 20px;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.accrodion.active .accrodion-title h4:before {
+    // content: '\f068';
+    content: '-';
+}
+
+// .accrodion.active .accrodion-title h4 {
+// 	color: #F6B129;
+// }
+.accrodion .accrodion-content {
+    padding-left: 35px;
+    padding-right: 35px; // // border-top: 1px solid #e5e5e5;
+    // padding-top: 20px;
+    // padding-bottom: 10px;
+    // padding-top: 12px;
+    padding-bottom: 22px;
+    p {
+        font-size: 17px;
+        line-height: 26px;
+        margin: 0;
+    }
+}
+
+
+.faq-area {
+    padding-top: 55px;
+    .title {
+        margin-bottom: 20px;
+        margin-top: 40px;
+        h3,
+        p {
+            margin: 0;
+        }
+        h3 {
+            font-family: 'Poppins';
+            font-weight: 600;
+            font-size: 34px;
+            color: #292929;
+            margin-bottom: 15px;
+            &:after {
+                content: '';
+                width: 40px;
+                height: 2px;
+                background: #5773d9;
+                display: inline-block;
+                margin-left: 25px;
+            }
+        }
+        p {
+            font-family: 'Lato';
+            font-size: 17px;
+            color: #797979;
+            line-height: 28px;
+        }
+    }
+    .accrodion-grp {
+        padding-right: 130px;
+    }
+}
+
+.faq-page {
+    .title {
+        margin-bottom: 50px;
+        h2,
+        p {
+            margin: 0;
+        }
+        h2 {
+            color: #242424;
+            font-family: 'Poppins';
+            font-size: 34px;
+            line-height: 36px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        p {
+            color: #000;
+            opacity: .7;
+            font-size: 17px;
+            line-height: 28px;
+        }
+    }
+    form {
+        position: relative;
+        margin-bottom: 50px;
+        input {
+            width: 100%;
+            background: #f7f7f7;
+            border: 1px solid #e0e0e0;
+            height: 60px;
+            border-radius: 5px;
+            outline: none;
+            padding-left: 25px;
+        }
+        button {
+            border: none;
+            outline: none;
+            background-color: transparent;
+            position: absolute;
+            top: 0;
+            right: 30px;
+            font-size: 20px;
+            color: #717171;
+            line-height: 50px;
+        }
+    }
+    .accrodion .accrodion-title h4 {
+        position: relative;
+        padding-left: 35px;
+        line-height: 25px;
+    }
+    .accrodion .accrodion-title h4:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+
+.faq-request-area {
+    .title {
+        margin-bottom: 65px;
+        h3 {
+            margin: 0;
+            color: #242424;
+            font-size: 34px;
+            font-family: 'Poppins';
+            font-weight: 600;
+        }
+    }
+    form {
+        input {
+            border: none;
+            outline: none;
+            border-bottom: 2px solid #e3e3e3;
+            width: 100%;
+            padding-bottom: 25px;
+            height: 40px;
+            background-color: transparent;
+            margin-bottom: 35px;
+        }
+        textarea {
+            border: none;
+            outline: none;
+            height: 145px;
+            border-bottom: 2px solid #e3e3e3;
+            width: 100%;
+            background-color: transparent;
+        }
+        button {
+            padding: 0;
+            border: none;
+            outline: none;
+            font-family: 'Poppins';
+            font-size: 17px;
+            border: 2px solid #ff7f45;
+            color: #ff7f45;
+            font-weight: 600;
+            width: 200px;
+            height: 52px;
+            line-height: 48px;
+            background-color: transparent;
+            border-radius: 40px;
+            margin-top: 30px;
+        }
+    }
+}
+
+.faq-section-two {
+    background: #2f2e50;
+    .title {
+        margin-bottom: 35px;
+        margin-top: 85px;
+        h3,
+        p {
+            margin: 0;
+        }
+        h3 {
+            font-family: 'Poppins';
+            font-weight: 600;
+            font-size: 32px;
+            color: #fff;
+            margin-bottom: 23px;
+            &:after {
+                content: '';
+                display: inline-block;
+                margin-left: 25px;
+                width: 40px;
+                height: 2px;
+                background: #fff;
+            }
+        }
+        p {
+            color: #b4b3bd;
+            opacity: .8;
+            line-height: 28px;
+        }
+    }
+    .faq-two-box {
+        padding-left: 40px;
+        padding-right: 63px;
+        .accrodion .accrodion-title h4 {
+            font-family: 'Poppins';
+            font-weight: 600;
+            font-size: 18px;
+            color: #fff;
+        }
+        .accrodion+.accrodion {
+            border-top: 0;
+            margin-top: 14px;
+        }
+        .accrodion .accrodion-title {
+            padding: 0;
+        }
+        .accrodion.active+.accrodion {
+            margin-top: 0;
+        }
+        .accrodion.active .accrodion-title h4 {
+            color: #26b99a;
+        }
+        .accrodion .accrodion-title h4:before {
+            content: '';
+            width: 44px;
+            height: 44px;
+            background: #fff url(../img/acc-two-plus.png) center center no-repeat;
+            display: inline-block;
+            vertical-align: middle;
+            border-radius: 50%;
+        }
+        .accrodion.active .accrodion-title h4::before {
+            background: #26b99a url(../img/acc-two-minus.png) center center no-repeat;
+        }
+        .accrodion .accrodion-content {
+            padding-top: 8px;
+            padding-bottom: 14px;
+            border-left: 1px solid rgba(224, 224, 224, .3);
+            margin-left: 20px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            padding-right: 0;
+        }
+        .accrodion .accrodion-content p {
+            color: #9998a6;
+            line-height: 28px;
+        }
+    }
+}
+
+.qoute-faq-area {
+    &.gray-bg {background:#F9F9F9;
+        .accrodion + .accrodion, .accrodion {border: none;background:#fff;}
+        .accrodion.active {
+            background: #F5F5F5;
+            .accrodion-content p {
+                color: #8e8d8d;
+            }
+        }
+    }
+    .title {
+        margin-bottom: 40px;
+        h3 {
+            margin: 0;
+            color: #242424;
+            font-family: 'Poppins';
+            font-weight: 600;
+            font-size: 34px;
+            line-height: 44px;
+            &:after {
+                content: '';
+                width: 40px;
+                height: 2px;
+                display: inline-block;
+                background: #5773d9;
+                margin-left: 30px;
+            }
+        }
+    }
+    .faq-content {
+        padding-left: 35px;
+        .title {
+            margin-bottom: 30px;
+        }
+    }
+    .qoute-content {
+        p.highlighted {
+            font-family: 'Open Sans';
+            font-weight: 400;
+            color: #3E56AA;
+            font-size: 22px;
+            line-height: 26px;
+            margin: 0;
+            margin-bottom: 10px;
+        }
+        p {
+            line-height: 28px;
+            color: #797979;
+            margin: 0;
+            font-family: 'Open Sans';
+            font-size: 16px;
+        }
+        .qoute-img {
+            margin-top: 20px;
+            img+img {
+                margin-left: 20px;
+            }
+        }
+    }
+    .accrodion+.accrodion,
+    .accrodion {
+        border: 1px solid #eaeaea;
+    }
+    .accrodion+.accrodion {
+        margin-top: 15px;
+    }
+    .accrodion .accrodion-title {
+        padding: 0;
+        padding: 12px 20px;
+    }
+    .accrodion .accrodion-title h4 {
+        font-size: 18px;
+        color: #000000;
+        font-weight: 400;
+        font-family: 'Lato';
+    }
+    .accrodion .accrodion-title h4:before {
+        color: #aeaeae;
+        margin-right: 20px;
+        vertical-align: middle;
+    }
+    .accrodion .accrodion-content {
+        padding-left: 55px;
+        padding-right: 34px;
+        padding-bottom: 28px;
+    }
+
+    .accrodion.active {
+        background: #f5f5f5;
+        .accrodion-content p {
+            color: #8e8d8d;
+        }
+    }
+}
+
+.faq-page {
+    padding-top: 100px;
+    padding-bottom: 112px;
+    .title {
+        margin-bottom: 50px;
+        h2,
+        p {
+            margin: 0;
+        }
+        h2 {
+            color: #242424;
+            font-family: 'Montserrat';
+            font-size: 34px;
+            line-height: 36px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        p {
+            color: #000;
+            opacity: .7;
+            font-size: 17px;
+            line-height: 28px;
+        }
+    }
+    form {
+        position: relative;
+        margin-bottom: 50px;
+        input {
+            width: 100%;
+            border: 1px solid #E0E0E0;
+            height: 60px;
+            border-radius: 5px;
+            outline: none;
+            padding-left: 25px;
+            font-family: 'Montserrat';
+            font-size: 16px;
+        }
+        button {
+            border: none;
+            outline: none;
+            background-color: transparent;
+            position: absolute;
+            top: 0;
+            right: 30px;
+            font-size: 20px;
+            color: #C0C0C0;
+            line-height: 50px;
+        }
+    }
+    .accrodion .accrodion-title h4 {
+        position: relative;
+        padding-left: 35px;
+        line-height: 25px;
+        font-weight: 600;
+    }
+    .accrodion .accrodion-title h4:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .accrodion + .accrodion {border: none;}
+}
+
+.faq-request-area {
+    background: #f8f8f8;
+    .title {
+        margin-bottom: 65px;
+        h3 {
+            margin: 0;
+            color: #242424;
+            font-size: 34px;
+            font-family: 'Poppins';
+            font-weight: 600;
+        }
+    }
+    form {
+        input {
+            border: none;
+            outline: none;
+            border-bottom: 2px solid #e3e3e3;
+            width: 100%;
+            padding-bottom: 25px;
+            height: 40px;
+            background-color: transparent;
+            margin-bottom: 35px;
+            font-family: 'Lato';
+            font-weight: bold;
+        }
+        textarea {
+            border: none;
+            outline: none;
+            height: 145px;
+            border-bottom: 2px solid #e3e3e3;
+            width: 100%;
+            background-color: transparent;
+            font-family: 'Lato';
+            font-weight: bold;
+        }
+        button[type=submit] {width: 189px;height: 52px;border: none;outline:none;border: 2px solid #3E56AA;line-height: 48px;font-size: 16px;font-weight: 600;font-family: 'Montserrat';color: #3E56AA;text-align: center;border-radius: 30px;background-color: transparent;margin-top: 50px;transition: all .4s ease;
+            &:hover {color: #fff;background:#3E56AA;}
+        }
+    }
+}

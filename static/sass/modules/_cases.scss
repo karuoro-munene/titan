@@ -1,0 +1,238 @@
+.cases-3-col-area {
+    padding-top: 80px;
+    padding-bottom: 60px;
+    .gallery-filter {
+        position: relative;
+        z-index: 99;
+        margin-bottom: 60-15px;
+        ul,
+        li {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        ul li {
+            display: inline-block;
+            padding: 15px 15px;
+        }
+        ul li span {
+            display: block;
+            color: #242424;
+            font-family: 'Poppins';
+            font-weight: 600;
+            font-size: 17px;
+            cursor: pointer;
+            padding: 0px 0px;
+            line-height: 28px;
+            border-bottom: 1px solid transparent;
+            transition: all .4s ease;
+        }
+        ul li.active span {
+            border-bottom-color: #3E56AA;
+            color: #3E56AA;
+        }
+        ul li:hover span {
+            border-bottom-color: #3E56AA;
+            color: #3E56AA;
+        }
+    }
+
+
+    .single-cases-item {
+        margin-bottom: 40px;
+        .img-box>img {
+            width: 100%;
+        }
+        .img-box {
+            position: relative;
+            border-bottom: 2px solid #3E56AA;
+            margin-bottom: 18px;
+            overflow: hidden;
+            &:hover {                
+                .overlay {
+                    bottom:0;
+                }
+            }
+            .overlay {
+                position: absolute;
+                bottom: -100%;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                transition: all .4s ease;
+                background: rgba(#3E56AA, .9);
+                text-align: center;
+                .box {
+                    display: table;
+                    width: 100%;
+                    height: 100%;
+                    .content {
+                        display: table-cell;
+                        vertical-align: middle;
+                        a {
+                            display: inline-block;
+                            color: #fff;
+                            font-family: 'Poppins';
+                            font-weight: 600;
+                            font-size: 16px;
+                            border-bottom: 1px solid #fff;
+                            line-height: 1em;
+                            padding-bottom: 3px;
+                        }
+                    }
+                }
+            }
+        }
+        .text-box {
+            padding-bottom: 0px;
+            h3,
+            p {
+                margin: 0;
+            }
+            h3 {
+                font-family: 'Poppins';
+                font-size: 16px;
+                line-height: 1em;
+                color: #242424;
+                font-weight: 600;
+                margin-bottom: 13px;
+            }
+            p {
+                font-family: 'Lora';
+                font-size: 16px;
+                font-style: italic;
+                line-height: 1em;
+                color: #949494;
+            }
+        }
+    }
+}
+
+
+.cases-details-area {
+    h3,
+    h4,
+    p {
+        margin: 0;
+    }
+    ul,
+    li {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    p {
+        line-height: 28px;
+    }
+    .title {
+        h3 {
+            font-family: 'Poppins';
+            font-weight: 600;
+            font-size: 34px;
+            line-height: 30px;
+            color: #242424;
+            &:after {
+                content: '';
+                width: 40px;
+                height: 2px;
+                background: #787dff;
+                display: inline-block;
+                margin-left: 25px;
+            }
+        }
+    }
+    .cases-description {
+        .title {
+            margin-top: 60px;
+            margin-bottom: 35px;
+        }
+        p+p {
+            margin-top: 28px;
+        }
+        padding-bottom: 93px;
+        // border-bottom: 1px solid #d1d1d1;
+    }
+    .cases-info-box {
+        background: #3E56AA;
+        .cases-info-box-inner {padding-left: 70px;padding-top: 40px;}
+        p {
+            margin: 0;
+            color: #fff;
+            font-family: 'Poppins';
+            font-size: 16px;
+            font-weight: 500;
+            +p {
+                margin-top: 7px;
+            }
+            label {
+                font-weight: 600;
+                font-size: 18px;
+                margin: 0;
+                margin-right: 15px;
+            }
+        }
+    }
+    .what-we-did {
+        padding-top: 100px;
+        padding-bottom: 93px;
+        background:#F9F9F9;
+        .title {
+            margin-bottom: 30px;
+        }
+        .what-we-did-content {
+            margin-top: 26px;
+        }
+        .single-what-we-did {
+            +.single-what-we-did {
+                margin-top: 29px;
+            }
+            padding-left: 36px;
+            position: relative;
+            &:before {
+                content: '';
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                display: inline-block;
+                background: #5b5b5b;
+                position: absolute;
+                top: 8px;
+                left: 0;
+            }
+            h4 {
+                color: #242424;
+                font-family: 'Montserrat';
+                font-weight: bold;
+                font-size: 18px;
+                line-height: 26px;
+                margin-bottom: 8px;
+            }
+            p {
+                line-height: 28px;
+            }
+        }
+    }
+    .results {
+        margin-top: 100px;
+        .title {
+            margin-bottom: 30px;
+        }
+        p+p {
+            margin-top: 28px;
+        }
+        .check-list {
+            margin-top: 33px;
+            li {
+                &:before {
+                    content: '';
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 50%;
+                    display: inline-block;
+                    background: #5b5b5b;
+                    margin-right: 22px;
+                }
+            }
+        }
+    }
+}

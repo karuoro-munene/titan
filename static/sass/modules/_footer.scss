@@ -1,0 +1,145 @@
+.footer {
+    background: #282828;
+    padding-top: 85px;
+    padding-bottom: 65px;
+    .footer-widget {
+        ul,
+        li {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .title {
+            h3 {
+                margin: 0;
+                font-family: 'Poppins';
+                font-weight: 500;
+                color: #fff;
+                font-size: 20px;
+            }
+        }
+        &.about-widget {
+            a.footer-logo {
+                margin-top: 13px;
+                margin-bottom: 41px;
+                display: inline-block;
+            }
+            p.phone-number {
+                font-size: 18px;
+                color: #8B8B8B;
+                font-family: 'Poppins';
+                margin: 0;
+            }
+            p.address {
+                margin: 0;
+                font-family: 'Poppins';
+                color: #8B8B8B;
+                font-size: 14px;
+                line-height: 26px;
+                letter-spacing: 0;
+                margin-top: 7px;
+            }
+        }
+        &.links-widget {
+            .title {
+                margin-bottom: 19px;
+            }
+            padding-left: 37px;
+            ul li a {
+                color: #8B8B8B;
+                font-family: 'Poppins';
+                font-size: 14px;
+                line-height: 18px;
+                transition: all .4s ease;
+                &:hover {
+                    color: #5E68FF;
+                }
+            }
+        }
+        &.service-widget {
+            .title {
+                margin-bottom: 20px;
+            }
+            padding-left: 60px;
+        }
+        &.subscribe-widget {
+            .title {
+                margin-bottom: 27px;
+            }
+            >p {
+                color: #8B8B8B;
+                font-family: 'Poppins';
+                font-size: 14px;
+                line-height: 24px;
+                margin: 0;
+            }
+            form {
+                width: 100%;
+                position: relative;
+                height: 46px;
+                margin-top: 15px;
+                input {
+                    border: 1px solid #383938;
+                    width: 100%;
+                    height: 100%;
+                    background-color: transparent;
+                    outline: none;
+                    border-radius: 5px;
+                    background: transparent;
+                    padding-left: 20px;
+                }
+                button {
+                    padding: 0;
+                    background: #3E56AA;
+                    width: 54px;
+                    height: 47px;
+                    font-size: 22px;
+                    color: #fff;
+                    line-height: 47px;
+                    border-top-right-radius: 5px;
+                    border-bottom-right-radius: 5px;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    border: none;
+                    outline: none;
+                }
+            }
+            .social {
+                margin-top: 30px;
+                a {
+                    display: inline-block;
+                    width: 36px;
+                    height: 36px;
+                    border: 1px solid #858585;
+                    color: #858585;
+                    font-size: 17px;
+                    line-height: 34px;
+                    text-align: center;
+                    border-radius: 50%;
+                    transition: all .4s ease;
+                    +a {
+                        margin-left: 10px;
+                    }
+                    &:hover {
+                        color: #5E68FF;
+                        border-color: #5E68FF;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.footer-bottom {
+    background: #282828;
+    border-top: 1px solid #353535;
+    padding: 19.5px 0px;
+    p {
+        color: #8B8B8B;
+        opacity: .56;
+        font-family: 'Poppins';
+        font-size: 14px;
+        margin: 0;
+    }
+}

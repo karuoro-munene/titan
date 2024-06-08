@@ -1,0 +1,101 @@
+.comming-soon-area {
+    background: #000 url(../img/comming-soon-bg.jpg) center center no-repeat;
+    background-size: cover;
+    padding-bottom: 280px;
+    padding-top: 280px;
+    position: relative;
+    &:before {content: '';position: absolute;top:0;left:0;right:0;bottom: 0;background:#2F2D37;opacity: .9;}
+    .thm-container {
+        max-width: 800px;
+        position: relative;z-index: 10;
+    }
+    h3 {
+        font-size: 70px;
+        line-height: 75px;
+        font-family: 'Poppins';
+        color: #fff;
+        font-weight: 400;
+        margin: 0;
+        span {
+            font-weight: 700;
+        }
+    }
+    ul,
+    li {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    ul {
+        margin-left: -15px;
+        margin-right: -15px;
+        margin-top: 100px;
+        margin-bottom: 50px;
+    }
+    ul li {
+        width: 25%;
+        float: left;
+        // padding: 0 15px;
+    }
+    ul li + li .box {border-left: 1px solid rgba(#fff,.2);}
+    ul li .box {
+        text-align: center;
+        // border: 2px solid #1fa69a;
+        // border-radius: 50%;
+        // padding-top: 40px;
+        h4 {
+            margin: 0;
+            color: #3E56AA;
+            font-family: 'Poppins';
+            font-weight: 600;
+            font-size: 60px;
+            line-height: 40px;
+        }
+        span {
+            color: #3E56AA;
+            font-family: 'Poppins';
+            text-transform: uppercase;
+            font-size: 20px;
+            font-weight: 500;
+            letter-spacing: 0;
+            display: inline-block;
+            margin-top: 20px;
+        }
+    }
+    p {
+        color: #fff;
+        font-family: 'Poppins';
+        font-size: 24px;
+        line-height: 34px;
+        font-weight: 600;
+        margin: 0;
+    }
+    form {
+        margin-top: 60px;
+        position: relative;
+        input {
+            width: 100%;
+            height: 76px;
+            padding-left: 35px;
+            border: none;
+            outline: none;
+            background: #fff;
+        }
+        button {
+            background-color: transparent;
+            border: none;
+            outline: none;
+            background: #3E56AA;
+            color: #fff;
+            font-size: 22px;
+            font-weight: 600;
+            font-family: 'Poppins';
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding-left: 30px;
+            padding-right: 30px;
+            height: 100%;
+        }
+    }
+}

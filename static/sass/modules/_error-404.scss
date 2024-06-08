@@ -1,0 +1,39 @@
+.error-404-area {
+    background: #242424 url(../img/404-bg.jpg) center center no-repeat;
+    background-size: cover;
+    padding-bottom: 175px;
+    padding-top: 230px;
+    position: relative;
+    &:before {content: '';background:#242A34;opacity: .68;position: absolute;top:0;left:0;right:0;bottom: 0;}
+    .thm-container {position: relative;z-index: 10;}
+    h2,
+    h3,
+    p {
+        margin: 0;
+    }
+    h2 {
+        font-family: 'Poppins';
+        color: #3E56AA;
+        font-size: 200px;
+        line-height: 200px;
+        font-weight: bold;
+    }
+    h3 {
+        font-family: 'Poppins';
+        font-weight: 600;
+        color: #fff;
+        font-size: 50px;
+        line-height: 55px;
+        margin-bottom: 20px;
+    }
+    p {
+        font-family: 'Poppins';
+        font-weight: 600;
+        color: #fff;
+        font-size: 25px;
+        line-height: 30px;
+    }
+    a {display: inline-block;background:#3E56AA;letter-spacing: 0;color: #fff;font-family: 'Poppins';font-weight: 600;font-size: 16px;line-height: 1em;border-radius: 30px;padding: 16px 48px;transition: all .4s ease;margin-top: 60px;
+        &:hover {color: #3E56AA;background:#fff;}
+    }
+}

@@ -1,0 +1,16 @@
+.inner-banner {
+	background: #000 url(../img/inner-banner-bg.jpg) center center no-repeat;
+	background-size: cover;
+	padding-top: 175px;
+	padding-bottom: 70px;
+	.title {
+		h3 {margin: 0;color: #fff;font-family: 'Poppins';font-size: 50px;font-weight: bold;line-height: 1em;}
+		.line {display: block;width: 35px;height: 2px;background:#5773d9;margin-top: 15px;}
+	}
+	.bread-cumb {margin-top: 5px;
+		a,span {color: #fff;font-family: 'Poppins';font-size: 13px;line-height: 26px;font-weight: 500;line-height: 55px;transition: all .3s ease;}
+		a {color: #5773d9;}
+		a:hover {color: #5773d9;}
+		span.sep {margin-left: 5px;margin-right: 5px;}
+	}
+}

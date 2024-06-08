@@ -1,0 +1,24 @@
+.company-history-area {padding-bottom: 100px;padding-top: 0px;
+	.single-company-history {
+		+ .single-company-history {margin-top: 40px;}
+		.year-box, .text-box {display: table-cell;vertical-align: top;}
+		.year-box .inner {background:#3E56AA;width: 108px;height: 108px;border-radius: 50%;text-align: center;color: #fff;font-family: 'Lato';font-size: 28px;line-height: 108px;font-weight: 600;
+			position: relative;
+			&:before {
+				content: '';
+				width: 1px;
+				height: 137px;
+				background: #d2d2d2;
+				position: absolute;
+				top: 100%;
+				left: 50%;
+			}
+		}
+		.text-box {padding-left: 70px;
+			h3, p {margin: 0;}
+			h3 {font-family: 'Poppins';font-weight: 600;font-size: 26px;line-height: 1em;color: #242424;letter-spacing: 0;margin-bottom: 20px;}
+			p {font-family: 'Open Sans';font-size: 17px;line-height: 28px;letter-spacing: 0;color: #797979;}
+		}
+	}
+	.single-company-history:last-child .year-box .inner:before {display: none;}
+}

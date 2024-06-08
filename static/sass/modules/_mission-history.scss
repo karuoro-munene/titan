@@ -1,0 +1,15 @@
+.mission-history-area {
+	background: #3E56AA;
+	padding: 100px 0;
+	h3, p {margin: 0;}
+	.sec-title {margin-bottom: 35px;
+		h3 {color: #fff;font-family: 'Poppins';font-weight: 600;font-size: 35px;line-height: 1em;}
+		.line {display: block;width: 35px;height: 1px;background: #fff;margin-top: 20px;}
+	}
+	p.highlighted {font-family: 'Lora';font-weight: normal;font-style: italic;color: #fff;font-size: 20px;line-height: 30px;letter-spacing: 0;}
+	p {font-family: 'Open Sans';font-size: 16px;line-height: 26px;color: #fff;letter-spacing: 0;}
+	p + p {margin-top: 30px;}
+	ul.list-item, ul.list-item li {margin: 0;padding: 0;list-style: none;}
+	ul.list-item {margin-top: 25px;}
+	ul.list-item li {color: #b6b8eb;font-family: 'Open Sans';font-size: 16px;line-height: 35px;letter-spacing: 0;}
+}

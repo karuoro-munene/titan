@@ -1,0 +1,161 @@
+@mixin placeholder {
+    &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        @content;
+    }
+    &::-moz-placeholder { /* Firefox 19+ */
+        @content;
+    }
+    &:-ms-input-placeholder { /* IE 10+ */
+        @content;
+    }
+    &:-moz-placeholder { /* Firefox 18- */
+        @content;
+    }
+}
+
+
+
+
+@media (min-width: 1200px) {
+    .container {
+        padding: 0;
+    }
+}
+
+body {
+    font-family: 'Lato';
+    color: #797979;
+    font-size: 17px;
+    line-height: 36px;
+    letter-spacing: .03em;
+    position: relative;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+a:hover,
+a:visited,
+a:active {
+    text-decoration: none;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    color: #242424;
+}
+
+dt {
+    font-weight: 700;
+}
+
+dd {
+    margin: 0 1.5em 1.5em;
+}
+
+fieldset {
+    margin-bottom: 1em;
+}
+fieldset {
+    border: 1px solid #bbb;
+    margin: 0 2px;
+    padding: 0.35em 0.625em 0.75em;
+}
+legend {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    color: inherit;
+    display: table;
+    max-width: 100%;
+    padding: 0;
+    white-space: normal;
+}
+
+.checkbox, .radio {display: inline-block;}
+
+button, input[type=submit] {
+    color: #fff;
+    background: #5E68FF;
+    font-size: 16px;
+    line-height: 1em;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    padding: 14.5px 30px;
+}
+
+button [type=reset], input[type=reset] {
+    color: #fff;
+    background: #242424;
+    font-size: 16px;
+    line-height: 1em;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    padding: 14.5px 30px;
+}
+
+label {color: #242424;}
+
+table {
+    border-collapse: collapse;
+    margin: 0 0 1.5em;
+    width: 100%;
+}
+
+thead th {
+    border-bottom: 2px solid #bbb;
+    padding-bottom: 0.5em;
+}
+
+th {
+    padding: 0.4em;
+    text-align: left;
+}
+
+tr {
+    border-bottom: 1px solid #eee;
+}
+
+td {
+    padding: 0.4em;
+}
+
+th:first-child,
+td:first-child {
+    padding-left: 0;
+}
+
+th:last-child,
+td:last-child {
+    padding-right: 0;
+}
+
+
+.thm-container {
+    max-width: 1200px;
+    padding: 0 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sec-pad {
+    padding: 100px 0;
+}
+
+.p0 {
+    padding: 0 !important;
+}
+
+.pb0 {
+    padding-bottom: 0 !important;
+}
+
+.mb0 {margin-bottom: 0 !important;}
+
+.dark-bg {
+    background: #f5f5f5;
+}

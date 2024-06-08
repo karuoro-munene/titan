@@ -1,0 +1,154 @@
+.request-a-call-back {
+    background:#EEEEEE;
+    padding-top: 95px;
+    padding-bottom: 70px;
+    .title {
+        margin-bottom: 50px;
+        h3 {
+            margin: 0;
+            font-family: 'Poppins';
+            color: #242424;
+            font-weight: 600;
+            font-size: 35px;
+            letter-spacing: 0;
+            &:after {
+                content: '';
+                width: 40px;
+                height: 2px;
+                background: #3E56AA;
+                display: inline-block;
+                margin-left: 35px;
+            }
+        }
+    }
+    .rqa-form {
+        input {
+            border: 1px solid #dedede;
+            height: 50px;
+            background: #fff;
+            outline: none;
+            padding-left: 20px;
+            width: 100%;
+            font-weight: bold;
+            margin-bottom: 30px;
+            &::-webkit-input-placeholder {
+                /* Chrome/Opera/Safari */
+                color: #999999;
+            }
+            &::-moz-placeholder {
+                /* Firefox 19+ */
+                color: #999999;
+            }
+            &:-ms-input-placeholder {
+                /* IE 10+ */
+                color: #999999;
+            }
+            &:-moz-placeholder {
+                /* Firefox 18- */
+                color: #999999;
+            }
+        }
+        button[type="submit"] {
+            padding: 0;
+            border: none;
+            outline: none;
+            font-family: 'Poppins';
+            font-size: 15px;
+            background: #3E56AA;
+            color: #fff;
+            font-weight: 600;
+            width: 162px;
+            height: 45px;
+            line-height: 45px;
+            border-radius: 30px;
+            display: block;
+            transition: all .3s ease;
+            &:hover {color: #fff;background:#2A292E;}
+        }
+        .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+            width: 100%;
+            height: 50px;
+            margin-bottom: 30px;
+        }
+        .bootstrap-select>.dropdown-toggle {
+            padding: 0;
+        }
+        .bootstrap-select>.btn {
+            padding: 0;
+            height: 100%;
+            padding: 0 15px;
+            color: #999999;
+            border: 1px solid #dedede;
+            background-color: #fff;
+            font-size: 17px;
+            outline: none !important;
+            padding-right: 20px;
+            border-radius: 0;
+            font-weight: bold;
+        }
+        .bootstrap-select.btn-group .dropdown-toggle .caret {
+            position: static;
+            width: auto;
+            height: auto;
+            vertical-align: top;
+            border: none;
+            margin-left: -5px;
+        }
+        .bootstrap-select.btn-group .dropdown-toggle .caret:before {
+            color: #C6C6C6;
+            content: "\f107";
+            font-family: FontAwesome;
+        }
+        .bootstrap-select.btn-group .dropdown-menu.inner {
+            width: 200px;
+        }
+        .bootstrap-select .dropdown-menu {
+            padding: 0;
+            margin: 0;
+            border: 0px solid #f7f7f7;
+            border-radius: 0;
+        }
+        .bootstrap-select .dropdown-menu>li {
+            padding: 0;
+        }
+        .bootstrap-select .dropdown-menu>li>a {
+            padding: 8px 15px;
+            font-size: 14px;
+            font-weight: normal;
+        }
+        .bootstrap-select .dropdown-menu>li>a span {
+            color: #999;
+        }
+        .bootstrap-select .dropdown-menu>li>a:hover {
+            background: #3E56AA;
+        }
+        .bootstrap-select .dropdown-menu>li>a:hover span {
+            color: #fff;
+        }
+    }
+}
+
+.request-call-back-two {
+    background:#3E56AA;
+    overflow-x: hidden;
+    .title {
+        margin-bottom: 50px;
+        h3 {
+            margin: 0;
+            font-family: 'Poppins';
+            color: #fff;
+            font-weight: 600;
+            font-size: 35px;
+            letter-spacing: 0;
+            &:after {
+                content: '';
+                width: 40px;
+                height: 2px;
+                background: #fff;
+                display: inline-block;
+                margin-left: 35px;
+            }
+        }
+    }
+    .request-a-qoute-content {max-width: none;}
+}
