@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <section class="air-banner inner-banner">
+        <div class="thm-container">
+            <div class="title">
+                <h3>Air Shipping</h3>
+                <div class="line"></div><!-- /.line -->
+            </div><!-- /.title -->
+            <div class="bread-cumb">
+                <a href="{% url 'home' %}">Home</a><span class="sep">></span><span class="page-name">Air Shipping</span>
+            </div><!-- /.bread-cumb pull-right -->
+        </div><!-- /.thm-container -->
+    </section><!-- /.inner-banner -->
+    <section class="about-section about-page">
+        <div class="thm-container">
+            <div class="row">
+                <div class="col-md-12 content-box">
+                    <div class="sec-title">
+                        <h2>Air Shipping</h2>
+                    </div><!-- /.sec-title -->
+                    <p class="small-margin"><span class="big">.</span> Our Air Service is <span class="text-black">weekly on every Tuesday</span>.</p>
+                    <p class="small-margin"><span class="big">.</span> Charges are based on <span class="text-black">Weight per Pound(LB)</span> </p>
+                    <p class="small-margin"><span class="big">.</span> Weight is done by taking the higher between Volumetric Airline Weight and Actual Weight. </p>
+                    <p class="small-margin"><span class="big">.</span> Volumetric Airline Weight is calculated using this formula: <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-black" style="font-weight: bold">((height * width * length) / 366) * 2.2</span>
+                    </p>
+                    <p class="small-margin"><span class="big">.</span> For Items <span class="text-black">above 100 pounds, a 10% discount</span> applies.</p>
+                    <p class="small-margin"><span class="big">.</span> <span class="text-black">Insurance coverage</span> is a required for all air packages and is based on <span class="text-black"> 2% of the value for Non-Electronics</span>, and <span class="text-black"> 5% for Electronics.</span> </p>
+                    <p class="small-margin"><span class="big">.</span><span class="text-black"> Laptops and Phones</span> are charged<span class="text-black"> per device.</span> Minimum charge is <span class="text-black">$50 </span>applies.</p>
+                </div><!-- /.col-md-12 -->
+            </div><!-- /.row -->
+        </div><!-- /.thm-container -->
+        <div class="thm-container">
+            <div class="row">
+                <div class="col-md-12 content-box">
+                    <div class="sec-title">
+                        <h3 class="text-center">Call for Any Enquiries</h3>
+                    </div><!-- /.sec-title -->
+                    <div>
+                        <h4 class="h3 text-center" style="font-weight: bolder!important;"><a class="text-danger"
+                                                                                             href="tel://(206) 730 2488">(206)
+                            730 2488</a></h4>
+                        <h5 class="h3 text-center" style="font-weight: bolder!important;"><a class="text-danger"
+                                                                                             target="_blank"
+                                                                                             href="mailto:info@titanshippers.com">info@titanshippers.com</a>
+                        </h5>
+                    </div>
+
+                </div><!-- /.col-md-12 -->
+            </div><!-- /.row -->
+
+        </div><!-- /.thm-container -->
+    </section><!-- /.you buy - we ship-section -->
+{% endblock %}

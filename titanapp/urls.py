@@ -1,5 +1,12 @@
 from django.urls import path
+from titanapp import views
 
 urlpatterns = [
-
+    path("", views.home, name="home"),
+    path("about-us",views.about, name="about"),
+    path("air-shipping",views.air, name="air"),
+    path("sea-shipping",views.sea, name="sea"),
+    path("you-buy-we-ship",views.youbuyweship, name="you-buy-we-ship"),
+    path("cost-calculator",views.pricing, name="pricing"),
+    path("contact-us",views.contact, name="contact"),
 ]

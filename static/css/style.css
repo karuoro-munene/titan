@@ -1650,6 +1650,56 @@ td:last-child {
   line-height: 24px;
   font-family: 'Lato';
 }
+.row .feature-box .single-feature{
+  margin-top:10px;
+}
+.row .feature-box .single-feature .img-box {
+
+  margin: 0;
+
+  padding: 0;
+}
+.row .feature-box .single-feature .img-box, .row .feature-box .single-feature .text-box {
+  display: table-cell;
+  vertical-align: top;
+}
+.row .feature-box .single-feature .img-box .inner {
+  margin-top:10px!important;
+  background: #3E56AA;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+}
+.row .feature-box .single-feature .img-box .inner i {
+  color: #fff;
+  font-size: 27px;
+  line-height: 40px;
+}
+.row .feature-box .single-feature .text-box {
+
+  padding-left: 20px;
+}
+.row .feature-box .single-feature .text-box h4, .row .feature-box .single-feature .text-box p {
+  margin: 0;
+}
+.row .feature-box .single-feature .text-box h4 {
+  margin-top:10px;
+  font-family: 'Poppins';
+  font-size: 242424;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1em;
+  margin-bottom: 0px;
+}
+.row .feature-box .single-feature .text-box p {
+  color: #797979;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: 'Lato';
+}
+/*end values*/
 .single-service-page-area .service-single-content .accordion-style-two > h4 {
   margin-bottom: 30px;
 }
@@ -2834,6 +2884,9 @@ td:last-child {
 .fun-fact-area.text-white .single-fun-fact p {
   color: #fff;
 }
+.text-black{
+  color:black!important;
+}
 
 /************************** 
 * 12. project area styles 
@@ -3270,11 +3323,35 @@ td:last-child {
 /************************** 
 * 14. inner banner styles 
 ***************************/
+.about-banner{
+    background: linear-gradient(rgba(0, 0, 0, 0.7),
+                       rgba(0, 0, 0, 0.7)), url(../img/about-banner-bg.jpeg) center center no-repeat;
+}
+.sea-banner{
+    background: linear-gradient(rgba(0, 0, 0, 0.7),
+                       rgba(0, 0, 0, 0.7)), url(../img/sea-banner-bg.jpg) center center no-repeat;
+}
+.air-banner{
+    background: linear-gradient(rgba(0, 0, 0, 0.6),
+                       rgba(0, 0, 0, 0.6)), url(../img/air-banner-bg.jpg) center center no-repeat;
+}
+.cost-banner{
+    background: linear-gradient(rgba(0, 0, 0, 0.7),
+                       rgba(0, 0, 0, 0.7)), url(../img/cost-calculator-bg.jpg) center center no-repeat;
+}
+.buy-ship-banner{
+    background: linear-gradient(rgba(0, 0, 0, 0.7),
+                       rgba(0, 0, 0, 0.7)), url(../img/buy-ship-banner-bg.png) center center no-repeat;
+}
+.contact-banner{
+    background: linear-gradient(rgba(0, 0, 0, 0.7),
+                       rgba(0, 0, 0, 0.7)), url(../img/contact-banner-bg.jpg) center center no-repeat;
+}
 .inner-banner {
-  background: #000 url(../img/inner-banner-bg.jpg) center center no-repeat;
   background-size: cover;
   padding-top: 175px;
   padding-bottom: 70px;
+
 }
 .inner-banner .title h3 {
   margin: 0;

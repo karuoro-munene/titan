@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <section class="inner-banner cost-banner">
+        <div class="thm-container">
+            <div class="title">
+                <h3>Cost Calculator</h3>
+                <div class="line"></div><!-- /.line -->
+            </div><!-- /.title -->
+            <div class="bread-cumb">
+                <a href="{% url 'home' %}">Home</a><span class="sep">></span><span
+                    class="page-name">Cost Calculator</span>
+            </div><!-- /.bread-cumb pull-right -->
+        </div><!-- /.thm-container -->
+    </section><!-- /.inner-banner -->
+
+    <section class="about-section about-page">
+        <div class="thm-container">
+            <div class="row">
+                <div class="col-md-12 content-box">
+                    <div class="sec-title">
+                        <h2>Cost Calculator</h2>
+                    </div><!-- /.sec-title -->
+                    <p>Enter the dimensions of your package and let us calculate the cost</p>
+                </div><!-- /.col-md-12 -->
+                <div class="col-md-6">
+                    <form id="cost-calculator">
+                        <div class="form-group row">
+                            <label for="length" class="col-sm-2 col-form-label">Length</label>
+                            <div class="col-sm-10">
+                                <input type="number" class="form-control" id="length"
+                                       placeholder="Box length (inches)">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="width" class="col-sm-2 col-form-label">Width</label>
+                            <div class="col-sm-10">
+                                <input type="number" class="form-control" id="width"
+                                       placeholder="Box width (inches)">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="height" class="col-sm-2 col-form-label">Height</label>
+                            <div class="col-sm-10">
+                                <input type="number" class="form-control" id="height"
+                                       placeholder="Box height (inches)">
+                            </div>
+                        </div>
+
+                    </form>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group row">
+                        <div class="col-sm-12">
+                            <button class="btn bg-color-scheme btn-block submit-btn">Calculate</button>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-12">
+                            <h4 class="text-center" id="cost"></h4>
+                            <h3 class="text-center" id="cost1"></h3>
+                        </div>
+                    </div>
+                    <div></div>
+                </div>
+            </div><!-- /.row -->
+
+        </div><!-- /.thm-container -->
+    </section><!-- /.you buy - we ship-section -->
+{% endblock %}
+{% block scripts %}
+    <script>
+        $(".submit-btn").click(function () {
+            
+            const length = $("#length").val();
+            const width = $("#width").val();
+            const height = $("#height").val();
+            
+            var cost;
+            cost =  ((height * width * length) / 1728) * 30;
+            $("#cost").text(`Exact charges = $${cost.toFixed(2)}`);
+            $("#cost1").text(`You pay $${Math.round(cost.toFixed(2))}.00`);
+
+        });
+    </script>
+{% endblock %}
