@@ -66,7 +66,7 @@
     </style>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg  blue-bg navbar-dark fixed-top">
+<nav class="navbar navbar-expand-lg  blue-bg navbar-dark fixed-top fw-bold">
         <!-- Container wrapper -->
         <div class="container-fluid px-5">
 
@@ -97,6 +97,7 @@
                     <li class="nav-item me-lg-0"><a class="nav-link" href="{% url 'you-buy-we-ship' %}">You Buy - We Ship</a></li>
                     <li class="nav-item me-lg-0"><a class="nav-link" href="{% url 'pricing' %}">Cost Calculator</a></li>
                     <li class="nav-item me-lg-0"><a class="nav-link" href="{% url 'contact' %}">What People Ship</a></li>
+                    <li class="nav-item me-lg-0"><a class="nav-link" href="{% url 'contact' %}">Tracking</a></li>
                     <li class="nav-item me-lg-0"><a class="nav-link" href="{% url 'contact' %}">Contact Us</a></li>
 
                 </ul>
@@ -180,23 +181,22 @@
                     <div class="about-widget footer-widget ">
                         <p class="phone-number"><a class="addr" target="_blank" href="tel://(206) 730 2488">(206) 730
                             2488</a></p><!-- /.phone-number -->
-                        <p class="address"><a class="addr" target="_blank"
-                                              href="https://maps.app.goo.gl/s4mEaYRGBxJ9m98W9">418 112St East Suite B,
-                            Tacoma, WA 98445</a> <br/> <a class="addr" target="_blank"
-                                                          href="mailto:info@titanshippers.com">info@titanshippers.com</a>
+                        <p class="address mb-2"><a class="addr" target="_blank"
+                                              href="https://maps.app.goo.gl/s4mEaYRGBxJ9m98W9">418 112St East Suite B,<br>
+                            Tacoma, WA 98445</a>
                         </p>
-.inner-banner .bread-cumb a {
-    color: #5773d9;
-}
+                        <p><a class="addr" target="_blank"
+                                                          href="mailto:info@titanshippers.com">info@titanshippers.com</a></p>
+                        <div class="px-2">
+                            
+                            <a target="_blank" href="https://www.facebook.com/aquariumcabanasnrb"
+                               ><i class="fab fa-facebook-square fa-2x"></i></a>
+                            <a target="_blank" href="https://www.instagram.com/titanshippers"
+                               ><i class="fab fa-instagram fa-2x"></i></a>
+                            <a target="_blank" href="https://wa.me/+12067302488"
+                               ><i class="fab fa-whatsapp-square fa-2x"></i></a>
+                        </div>
 
-.inner-banner .bread-cumb a:hover {
-    color: #5773d9;
-}
-
-.inner-banner .bread-cumb span.sep {
-    margin-left: 5px;
-    margin-right: 5px;
-}
                     </div>
                 </div><!-- /.col-md-3 -->
 
@@ -208,13 +208,10 @@
                         <p style="margin-bottom: 10px!important;">Leave your phone and address for us to pick up your
                             packages.</p>
                         <div id="book-pick-up" class="">
-                            <button class="btn-block" style="padding-top: 3px!important;padding-bottom: 3px!important;">
-                                <i class="fa fa-truck fa-2x"></i></button>
+                            <button class="btn-block fw-bold shadow-3-strong" style="padding-top: 3px!important;padding-bottom: 3px!important;">
+                              Book Now  </button>
                         </div>
-                        <div class="social">
-                            <a target="_blank" href="https://www.facebook.com/aquariumcabanasnrb"
-                               class="fa fa-facebook"></a>
-                        </div>
+                        
                     </div>
                 </div>
             </div>
