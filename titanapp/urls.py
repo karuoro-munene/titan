@@ -3,7 +3,6 @@ from titanapp import views
 
 urlpatterns = [
     path("", views.home, name="home"),
-    path("about-us",views.about, name="about"),
     path("air-shipping",views.air, name="air"),
     path("sea-shipping",views.sea, name="sea"),
     path("you-buy-we-ship",views.youbuyweship, name="you-buy-we-ship"),

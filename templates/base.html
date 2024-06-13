@@ -91,11 +91,12 @@
                 <!-- Icons -->
                 <ul class="navbar-nav d-flex flex-row me-1">
 
-                    <li class="nav-item me-lg-0"><a class="nav-link" href="{% url 'about' %}">About Us</a></li>
+                    <li class="nav-item me-lg-0"><a class="nav-link" href="{% url 'home' %}">Home</a></li>
                     <li class="nav-item me-lg-0"><a class="nav-link" href="{% url 'air' %}">Air Shipping</a></li>
                     <li class="nav-item me-lg-0"><a class="nav-link" href="{% url 'sea' %}">Sea Shipping</a></li>
                     <li class="nav-item me-lg-0"><a class="nav-link" href="{% url 'you-buy-we-ship' %}">You Buy - We Ship</a></li>
                     <li class="nav-item me-lg-0"><a class="nav-link" href="{% url 'pricing' %}">Cost Calculator</a></li>
+                    <li class="nav-item me-lg-0"><a class="nav-link" href="{% url 'contact' %}">What People Ship</a></li>
                     <li class="nav-item me-lg-0"><a class="nav-link" href="{% url 'contact' %}">Contact Us</a></li>
 
                 </ul>
@@ -167,12 +168,16 @@
     <footer class="footer">
         <div class="thm-container">
             <div class="row">
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <div class="about-widget footer-widget ">
                         <a href="{% url 'home' %}" class="footer-logo"><img class="img-rounded"
                                                                             style="max-height: 100px;"
                                                                             src="{% static 'img/footer-logo.jpeg' %}"
                                                                             alt="footer"/></a>
+                    </div>
+                </div><!-- /.col-md-3 -->
+                <div class="col-md-4">
+                    <div class="about-widget footer-widget ">
                         <p class="phone-number"><a class="addr" target="_blank" href="tel://(206) 730 2488">(206) 730
                             2488</a></p><!-- /.phone-number -->
                         <p class="address"><a class="addr" target="_blank"
@@ -180,37 +185,22 @@
                             Tacoma, WA 98445</a> <br/> <a class="addr" target="_blank"
                                                           href="mailto:info@titanshippers.com">info@titanshippers.com</a>
                         </p>
+.inner-banner .bread-cumb a {
+    color: #5773d9;
+}
 
+.inner-banner .bread-cumb a:hover {
+    color: #5773d9;
+}
+
+.inner-banner .bread-cumb span.sep {
+    margin-left: 5px;
+    margin-right: 5px;
+}
                     </div>
                 </div><!-- /.col-md-3 -->
-                <div class="col-md-3">
-                    <div class="footer-widget links-widget">
-                        <div class="title">
-                            <h3>Useful Links</h3>
-                        </div><!-- /.title -->
-                        <ul class="link-list">
-                            <li><a href="{% url 'about' %}">About Us</a></li>
-                            <li><a href="{% url 'air' %}">Air Shipping</a></li>
-                            <li><a href="{% url 'sea' %}">Sea Shipping</a></li>
-                            <li><a href="{% url 'you-buy-we-ship' %}">You Buy - We Ship</a></li>
-                            <li><a href="{% url 'pricing' %}">Cost Calculator</a></li>
-                            <li><a href="{% url 'contact' %}">Contact Us</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="footer-widget links-widget service-widget">
-                        <div class="title">
-                            <h3>Services</h3>
-                        </div><!-- /.title -->
-                        <ul class="link-list">
-                            <li><a href="{% url 'air' %}">Air Shipping</a></li>
-                            <li><a href="{% url 'sea' %}">Sea Shipping</a></li>
-                            <li><a href="{% url 'you-buy-we-ship' %}">You Buy - We Ship</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-3">
+
+                <div class="col-md-4">
                     <div class="footer-widget subscribe-widget">
                         <div class="title">
                             <h3>Book a Pick-Up</h3>

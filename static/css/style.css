@@ -1983,33 +1983,6 @@ td:last-child {
     margin-top: 15px;
 }
 
-.inner-banner .bread-cumb {
-    margin-top: 5px;
-}
-
-.inner-banner .bread-cumb a, .inner-banner .bread-cumb span {
-    color: #fff;
-    font-family: 'Poppins';
-    font-size: 13px;
-    line-height: 26px;
-    font-weight: 500;
-    line-height: 55px;
-    -webkit-transition: all .3s ease;
-    transition: all .3s ease;
-}
-
-.inner-banner .bread-cumb a {
-    color: #5773d9;
-}
-
-.inner-banner .bread-cumb a:hover {
-    color: #5773d9;
-}
-
-.inner-banner .bread-cumb span.sep {
-    margin-left: 5px;
-    margin-right: 5px;
-}
 
 
 
