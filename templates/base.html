@@ -7,24 +7,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/png" sizes="32x32" href="{% static 'img/logo-cropped.png' %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
-    <style>
-        body {
-            background: #8360c3; /* fallback for old browsers */
-            background: -webkit-linear-gradient(to right, #8360c3, #2ebf91); /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to right, #8360c3, #2ebf91); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+          rel="stylesheet">
+    <link href="{% static 'assets/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet"/>
+    <link href="{% static 'css/mdb.min.css' %}" rel="stylesheet"/>
+    <link href="{% static 'assets/font-awesome/css/all.min.css' %}" rel="stylesheet"/>
 
+
+    <style>
+        * {
+            font-family: "Raleway", sans-serif !important;
+            font-optical-sizing: auto;
+        }
+
+        body {
+            background: rgb(9, 19, 54);
+            background: linear-gradient(90deg, rgba(9, 19, 54, 1) 0%, rgba(26, 48, 87, 1) 80%);
         }
 
         * {
             color: white !important;
-        }
-
-        .navbar-brand img {
-            max-height: 70px;
-            margin-left: 10px;
-            margin-top: auto !important;
-            margin-bottom: auto !important;
         }
 
         .addr {
@@ -44,89 +48,120 @@
             color: white;
         }
 
-        .small-margin {
-            margin-top: 0px !important;
-            margin-bottom: 0px !important;
-            padding-top: 0px !important;
-            padding-bottom: 0px !important;
-        }
 
-        .bg-color-scheme {
-            background: #3E56AA;
+        .blue-bg {
+            background: rgb(9, 19, 54) !important;
+            background: linear-gradient(90deg, rgba(9, 19, 54, 1) 0%, rgba(26, 48, 87, 1) 80%) !important;
             color: white;
-            font-weight: bolder;
         }
 
         .big {
-            font-size: 54px;
-        !important;
+            font-size: 54px !important;
         }
 
-        .thick {
+        p {
             font-size: 17px !important;
-            color: black !important;
+            line-height: 24px !important;
         }
     </style>
 </head>
 <body>
+<nav class="navbar navbar-expand-lg  blue-bg navbar-dark fixed-top">
+        <!-- Container wrapper -->
+        <div class="container-fluid px-5">
 
-<div id="page-wrapper">
+            <!-- Navbar brand -->
+            <a class="navbar-brand" href="{% url 'home' %}"><img style="max-height: 60px;"
+                                                                 src="{% static 'img/logo-cropped.png' %}"
+                                                                 alt="logo"></a>
 
-    <header class="header home-page-two">
-        <div class="top-bar-home-two">
-            <div class="thm-container clearfix">
-                <div class="left-contact-info pull-left">
-                    <ul class="list-inline">
-                        <li><p><i class="fa fa-phone"></i> + (206) 730 2488</p></li><!--
-    					-->
-                        <li><p><i class="fa fa-envelope-o"></i> info@titanshippers.com</p></li><!--
-    					-->
-                    </ul><!-- /.list-inline -->
-                </div><!-- /.left-contact-info -->
-                <div class="right-social pull-right">
-                    <ul class="list-inline">
-                        <li><a target=”_blank” href="https://www.facebook.com/aquariumcabanasnrb"
-                               class="fa fa-facebook"></a></li>
-                    </ul><!-- /.list-inline -->
-                </div><!-- /.right-contact-info pull-right -->
-            </div><!-- /.thm-container -->
-        </div><!-- /.top-bar-home-two -->
-        <nav class="navbar navbar-default header-navigation stricky">
-            <div class="thm-container clearfix">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                            data-target=".main-navigation" aria-expanded="false">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="{% url 'home' %}"
-                       style="padding-top:5px!important;padding-bottom:5px!important">
-                        <img src="{% static 'img/logo-cropped.png' %}" alt="logo">
-                    </a>
-                </div>
+            <!-- Toggle button -->
+            <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
+                    data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
 
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse main-navigation" id="main-nav-bar">
+            <!-- Collapsible wrapper -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
+                </ul>
 
-                    <ul class="nav navbar-nav navigation-box">
-                        <li><a href="{% url 'about' %}">About Us</a></li>
-                        <li><a href="{% url 'air' %}">Air Shipping</a></li>
-                        <li><a href="{% url 'sea' %}">Sea Shipping</a></li>
-                        <li><a href="{% url 'you-buy-we-ship' %}">You Buy - We Ship</a></li>
-                        <li><a href="{% url 'pricing' %}">Cost Calculator</a></li>
-                        <li><a href="{% url 'contact' %}">Contact Us</a></li>
-                    </ul>
+                <!-- Icons -->
+                <ul class="navbar-nav d-flex flex-row me-1">
 
-                </div>
+                    <li class="nav-item me-lg-0"><a class="nav-link" href="{% url 'about' %}">About Us</a></li>
+                    <li class="nav-item me-lg-0"><a class="nav-link" href="{% url 'air' %}">Air Shipping</a></li>
+                    <li class="nav-item me-lg-0"><a class="nav-link" href="{% url 'sea' %}">Sea Shipping</a></li>
+                    <li class="nav-item me-lg-0"><a class="nav-link" href="{% url 'you-buy-we-ship' %}">You Buy - We Ship</a></li>
+                    <li class="nav-item me-lg-0"><a class="nav-link" href="{% url 'pricing' %}">Cost Calculator</a></li>
+                    <li class="nav-item me-lg-0"><a class="nav-link" href="{% url 'contact' %}">Contact Us</a></li>
+
+                </ul>
 
             </div>
-        </nav>
-    </header>
+        </div>
+        <!-- Container wrapper -->
+    </nav>
+<div id="page-wrapper">
 
+    {#    <header class="header home-page-two">#}
+    {#        <div class="top-bar-home-two">#}
+    {#            <div class="thm-container clearfix">#}
+    {#                <div class="left-contact-info pull-left">#}
+    {#                    <ul class="list-inline">#}
+    {#                        <li><p><i class="fa fa-phone"></i> + (206) 730 2488</p></li><!--#}
+    {#    					-->#}
+    {#                        <li><p><i class="fa fa-envelope-o"></i> info@titanshippers.com</p></li><!--#}
+    {#    					-->#}
+    {#                    </ul><!-- /.list-inline -->#}
+    {#                </div><!-- /.left-contact-info -->#}
+    {#                <div class="right-social pull-right">#}
+    {#                    <ul class="list-inline">#}
+    {#                        <li><a target=”_blank” href="https://www.facebook.com/aquariumcabanasnrb"#}
+    {#                               class="fa fa-facebook"></a></li>#}
+    {#                    </ul><!-- /.list-inline -->#}
+    {#                </div><!-- /.right-contact-info pull-right -->#}
+    {#            </div><!-- /.thm-container -->#}
+    {#        </div><!-- /.top-bar-home-two -->#}
+    {#        <nav class="navbar navbar-default header-navigation stricky">#}
+    {#            <div class="thm-container clearfix">#}
+    {#                <!-- Brand and toggle get grouped for better mobile display -->#}
+    {#                <div class="navbar-header">#}
+    {#                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"#}
+    {#                            data-target=".main-navigation" aria-expanded="false">#}
+    {#                        <span class="sr-only">Toggle navigation</span>#}
+    {#                        <span class="icon-bar"></span>#}
+    {#                        <span class="icon-bar"></span>#}
+    {#                        <span class="icon-bar"></span>#}
+    {#                    </button>#}
+    {#                    <a class="navbar-brand" href="{% url 'home' %}"#}
+    {#                       style="padding-top:5px!important;padding-bottom:5px!important">#}
+    {#                        <img src="{% static 'img/logo-cropped.png' %}" alt="logo">#}
+    {#                    </a>#}
+    {#                </div>#}
+    {##}
+    {#                <!-- Collect the nav links, forms, and other content for toggling -->#}
+    {#                <div class="collapse navbar-collapse main-navigation" id="main-nav-bar">#}
+    {##}
+    {##}
+    {#                    <ul class="nav navbar-nav navigation-box">#}
+    {#                        <li><a href="{% url 'about' %}">Home</a></li>#}
+    {#                        <li><a href="{% url 'air' %}">Air Shipping</a></li>#}
+    {#                        <li><a href="{% url 'sea' %}">Sea Shipping</a></li>#}
+    {#                        <li><a href="{% url 'you-buy-we-ship' %}">You Buy - We Ship</a></li>#}
+    {#                        <li><a href="{% url 'pricing' %}">Cost Calculator</a></li>#}
+    {#                        <li><a href="{% url 'contact' %}">Contact Us</a></li>#}
+    {#                    </ul>#}
+    {##}
+    {#                </div>#}
+    {##}
+    {#            </div>#}
+    {#        </nav>#}
+    {#    </header>#}
+    
+    <!-- Navbar -->
     {% block content %}
     {% endblock %}
     <footer class="footer">
@@ -203,25 +238,11 @@
 
 </div>
 
-<!--Scroll to top-->
-{#<div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-angle-up"></span></div>#}
-
-
 <script>document.getElementById("current-year").innerHTML = new Date().getFullYear()</script>
 <script src="{% static 'assets/jquery.js' %}"></script>
 <script src="{% static 'assets/bootstrap/js/bootstrap.min.js' %}"></script>
-<script src="{% static 'assets/bootstrap-select/dist/js/bootstrap-select.min.js' %}"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
-<script src="{% static 'assets/gmaps.js' %}"></script>
-<script src="{% static 'assets/map-helper.js' %}"></script>
-<script src="{% static 'assets/jquery-validation/dist/jquery.validate.min.js' %}"></script>
-<script src="{% static 'assets/owl.carousel-2/owl.carousel.min.js' %}"></script>
-<script src="{% static 'assets/isotope.js' %}"></script>
-<script src="{% static 'assets/Magnific-Popup-master/dist/jquery.magnific-popup.min.js' %}"></script>
-<script src="{% static 'assets/waypoints.min.js' %}"></script>
-<script src="{% static 'assets/jquery.counterup.min.js' %}"></script>
-<script src="{% static 'assets/wow.min.js' %}"></script>
-<script src="{% static 'js/custom.js' %}"></script>
+<script src="{% static 'js/mdb.min.js' %}"></script>
+<script src="{% static 'assets/font-awesome/js/all.min.js' %}"></script>
 {% block scripts %}
 {% endblock %}
 </body>
