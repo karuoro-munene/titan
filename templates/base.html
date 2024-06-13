@@ -5,43 +5,61 @@
     <meta charset="UTF-8"/>
     <title>Titan Shippers</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/png" sizes="32x32" href="{%static 'img/logo-cropped.png'%}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'img/logo-cropped.png' %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
     <style>
-    .navbar-brand img {
-        max-height: 70px;
-        margin-left:10px;
-        margin-top:auto!important;
-        margin-bottom:auto!important;
-      }
-    .addr{
-        color:gray;
-    }
-    .addr:hover{
-        color:#5E68FF;
-    }
-    .submit-btn:hover{
-        color:white;
-    }
-    .submit-btn:focus {
-    outline: none;
-        color: white;
-}
-    .small-margin{
-        margin-top:0px!important;
-        margin-bottom: 0px!important;
-        padding-top:0px!important;
-        padding-bottom:0px!important;
-    }
-    .bg-color-scheme{
-        background: #3E56AA;
-        color:white;
-        font-weight: bolder;
-    }
-    .big{
-        font-size: 54px;!important;
-    }
+        body{
+            background: #0C163C;
+            background: linear-gradient(90deg, rgba(9, 9, 121, 1) 0%, rgba(156, 212, 211, 1) 0%);
+        }
+
+        .navbar-brand img {
+            max-height: 70px;
+            margin-left: 10px;
+            margin-top: auto !important;
+            margin-bottom: auto !important;
+        }
+
+        .addr {
+            color: gray;
+        }
+
+        .addr:hover {
+            color: #5E68FF;
+        }
+
+        .submit-btn:hover {
+            color: white;
+        }
+
+        .submit-btn:focus {
+            outline: none;
+            color: white;
+        }
+
+        .small-margin {
+            margin-top: 0px !important;
+            margin-bottom: 0px !important;
+            padding-top: 0px !important;
+            padding-bottom: 0px !important;
+        }
+
+        .bg-color-scheme {
+            background: #3E56AA;
+            color: white;
+            font-weight: bolder;
+        }
+
+        .big {
+            font-size: 54px;
+        !important;
+        }
+
+        .thick {
+            font-size: 17px !important;
+            color: black !important;
+        }
     </style>
 </head>
 <body>
@@ -61,7 +79,8 @@
                 </div><!-- /.left-contact-info -->
                 <div class="right-social pull-right">
                     <ul class="list-inline">
-                        <li><a target=”_blank” href="https://www.facebook.com/aquariumcabanasnrb" class="fa fa-facebook"></a></li>
+                        <li><a target=”_blank” href="https://www.facebook.com/aquariumcabanasnrb"
+                               class="fa fa-facebook"></a></li>
                     </ul><!-- /.list-inline -->
                 </div><!-- /.right-contact-info pull-right -->
             </div><!-- /.thm-container -->
@@ -77,8 +96,9 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="{%url 'home'%}" style="padding-top:5px!important;padding-bottom:5px!important">
-                        <img src="{% static 'img/logo-cropped.png'%}" alt="logo">
+                    <a class="navbar-brand" href="{% url 'home' %}"
+                       style="padding-top:5px!important;padding-bottom:5px!important">
+                        <img src="{% static 'img/logo-cropped.png' %}" alt="logo">
                     </a>
                 </div>
 
@@ -87,12 +107,12 @@
 
 
                     <ul class="nav navbar-nav navigation-box">
-                        <li><a href="{%url 'about'%}">About Us</a></li>
-                        <li><a href="{%url 'air'%}">Air Shipping</a></li>
-                        <li><a href="{%url 'sea'%}">Sea Shipping</a></li>
-                        <li><a href="{%url 'you-buy-we-ship'%}">You Buy - We Ship</a></li>
-                        <li><a href="{%url 'pricing'%}">Cost Calculator</a></li>
-                        <li><a href="{%url 'contact'%}">Contact Us</a></li>
+                        <li><a href="{% url 'about' %}">About Us</a></li>
+                        <li><a href="{% url 'air' %}">Air Shipping</a></li>
+                        <li><a href="{% url 'sea' %}">Sea Shipping</a></li>
+                        <li><a href="{% url 'you-buy-we-ship' %}">You Buy - We Ship</a></li>
+                        <li><a href="{% url 'pricing' %}">Cost Calculator</a></li>
+                        <li><a href="{% url 'contact' %}">Contact Us</a></li>
                     </ul>
 
                 </div>
@@ -108,10 +128,17 @@
             <div class="row">
                 <div class="col-md-3">
                     <div class="about-widget footer-widget ">
-                        <a href="{% url 'home' %}" class="footer-logo" ><img class="img-rounded" style="max-height: 100px;" src="{% static 'img/footer-logo.jpeg' %}"
-                                                             alt="footer"/></a>
-                        <p class="phone-number"><a class="addr" target="_blank" href="tel://(206) 730 2488">(206) 730 2488</a></p><!-- /.phone-number -->
-                        <p class="address"><a class="addr"  target="_blank" href="https://maps.app.goo.gl/s4mEaYRGBxJ9m98W9">418 112St East Suite B, Tacoma, WA 98445</a> <br/> <a class="addr"  target="_blank" href="mailto:info@titanshippers.com">info@titanshippers.com</a></p>
+                        <a href="{% url 'home' %}" class="footer-logo"><img class="img-rounded"
+                                                                            style="max-height: 100px;"
+                                                                            src="{% static 'img/footer-logo.jpeg' %}"
+                                                                            alt="footer"/></a>
+                        <p class="phone-number"><a class="addr" target="_blank" href="tel://(206) 730 2488">(206) 730
+                            2488</a></p><!-- /.phone-number -->
+                        <p class="address"><a class="addr" target="_blank"
+                                              href="https://maps.app.goo.gl/s4mEaYRGBxJ9m98W9">418 112St East Suite B,
+                            Tacoma, WA 98445</a> <br/> <a class="addr" target="_blank"
+                                                          href="mailto:info@titanshippers.com">info@titanshippers.com</a>
+                        </p>
 
                     </div>
                 </div><!-- /.col-md-3 -->
@@ -147,12 +174,15 @@
                         <div class="title">
                             <h3>Book a Pick-Up</h3>
                         </div>
-                        <p  style="margin-bottom: 10px!important;">Leave your phone and address for us to pick up your packages.</p>
+                        <p style="margin-bottom: 10px!important;">Leave your phone and address for us to pick up your
+                            packages.</p>
                         <div id="book-pick-up" class="">
-                            <button  class="btn-block" style="padding-top: 3px!important;padding-bottom: 3px!important;"><i class="fa fa-truck fa-2x"></i></button>
+                            <button class="btn-block" style="padding-top: 3px!important;padding-bottom: 3px!important;">
+                                <i class="fa fa-truck fa-2x"></i></button>
                         </div>
                         <div class="social">
-                            <a target="_blank" href="https://www.facebook.com/aquariumcabanasnrb" class="fa fa-facebook"></a>
+                            <a target="_blank" href="https://www.facebook.com/aquariumcabanasnrb"
+                               class="fa fa-facebook"></a>
                         </div>
                     </div>
                 </div>
