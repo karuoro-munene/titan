@@ -162,7 +162,15 @@ td:last-child {
     background: url(../img/titan-bg-clean.jpg) center center no-repeat;
 }
 
+.about {
+    display: table;
+}
 
+.col-about {
+    float: none;
+    display: table-cell;
+    vertical-align: top;
+}
 
 /**************************
 * 6. about styles
