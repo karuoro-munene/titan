@@ -12,6 +12,15 @@ input {
     color: black !important;
 }
 
+select {
+    color: black !important;
+}
+
+textarea {
+    color: black !important;
+}
+
+
 body {
     font-family: 'Raleway';
     color: white;

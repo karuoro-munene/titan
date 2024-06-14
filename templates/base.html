@@ -63,6 +63,11 @@
             font-size: 17px !important;
             line-height: 24px !important;
         }
+
+        #book-nav:hover {
+            color: white !important;
+        }
+
     </style>
 </head>
 <body>
@@ -94,9 +99,13 @@
                 <li class="nav-item me-lg-0"><a class="nav-link" href="{% url 'you-buy-we-ship' %}">You Buy - We
                     Ship</a></li>
                 <li class="nav-item me-lg-0"><a class="nav-link" href="{% url 'pricing' %}">Cost Calculator</a></li>
-                <li class="nav-item me-lg-0"><a class="nav-link" href="{% url 'what-people-ship' %}">What People Ship</a></li>
+                <li class="nav-item me-lg-0"><a class="nav-link" href="{% url 'what-people-ship' %}">What People
+                    Ship</a></li>
                 <li class="nav-item me-lg-0"><a class="nav-link" href="{% url 'track-package' %}">Tracking</a></li>
-                <li class="nav-item me-lg-0"><a class="nav-link btn text-capitalize bg-color-scheme text-decoration-none" href="">Book Pickup</a></li>
+                <li class="nav-item me-lg-0"><span
+                        class="nav-link btn text-capitalize bg-color-scheme" id="book-nav" data-bs-toggle="modal"
+                        data-bs-target="#book-pickup">Book
+                    Pickup</span></li>
             </ul>
 
         </div>
@@ -119,7 +128,8 @@
                 </div><!-- /.col-md-3 -->
                 <div class="col-md-5 mb-5">
                     <div class="about-widget footer-widget ">
-                        <h5 class="phone-number fw-bold mb-3"><a class="addr" target="_blank" href="tel://(206) 730 2488">(206) 730
+                        <h5 class="phone-number fw-bold mb-3"><a class="addr" target="_blank"
+                                                                 href="tel://(206) 730 2488">(206) 730
                             2488</a></h5><!-- /.phone-number -->
                         <p class="address mb-3"><a class="addr" target="_blank"
                                                    href="https://maps.app.goo.gl/s4mEaYRGBxJ9m98W9">418 112St East Suite
@@ -133,8 +143,8 @@
                             ><i class="fab fa-facebook-square fa-2x"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <a class="" target="_blank" href="https://www.instagram.com/titanshippers"
                             ><i class="fab fa-instagram fa-2x"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <a class=" target="_blank" href="https://wa.me/+12067302488"
-                            ><i class="fab fa-whatsapp fa-2x"></i></a>
+                            <a class="" target="_blank" href="https://wa.me/+12067302488">
+                                <i class="fab fa-whatsapp fa-2x"></i></a>
                         </div>
 
                     </div>
@@ -145,11 +155,13 @@
                         <div class="title">
                             <h3>Book a Pick-Up</h3>
                         </div>
-                        <p style="margin-bottom: 10px!important;">Leave your email, or phone number and address for us to pick up your
+                        <p style="margin-bottom: 10px!important;">Leave your email, or phone number and address for us
+                            to pick up your
                             packages.</p>
                         <div id="book-pick-up" class="">
-                            <button class="btn-block fw-bold shadow-5-strong rounded py-3"
-                                    style="padding-top: 3px!important;padding-bottom: 3px!important;">
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#book-pickup"
+                                    class="btn text-capitalize btn-block bg-color-scheme py-3 fw-bold shadow-5-strong rounded py-3"
+                            >
                                 Book Now
                             </button>
                         </div>
@@ -167,11 +179,171 @@
 
 </div>
 
+<div class="modal fade" id="book-pickup" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header border-0">
+                <h5 class="modal-title" style="color: black!important;" id="pickup-modal">Book a pick-up</h5>
+                <button id="close-modal" type="button" class="btn-close" data-mdb-ripple-init data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+                <div class="row text-black">
+                    <div class="col-md-12 mb-3">
+                        <input type="text" id="book-email"
+                               class="form-control" placeholder="Enter email address"/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <input type="text" id="book-address"
+                               class="form-control" placeholder="Address"/>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <input type="text" id="book-city"
+                               class="form-control" placeholder="City"/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-3 ">
+                        <select class="form-control" aria-label="default-select" id="states-select">
+                            <option selected style="color:gray!important;">Select State</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <input type="text" id="book-zip"
+                               class="form-control " placeholder="Zip-Code"/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <input type="text" id="book-phone"
+                               class="form-control form-control-lg" placeholder="Phone (123-456-7890)"/>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <input type="text" id="book-name"
+                               class="form-control form-control-lg" placeholder="Name"/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 mb-3">
+                        <textarea class="form-control" id="book-message" rows="3"
+                                  placeholder="Enter a message..."></textarea>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="modal-footer border-0">
+                <button type="button" class="btn bg-color-scheme fw-bold text-capitalize btn-block"
+                        id="book-book"> Book Now
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <script>document.getElementById("current-year").innerHTML = new Date().getFullYear()</script>
 <script src="{% static 'assets/jquery.js' %}"></script>
 <script src="{% static 'assets/bootstrap/js/bootstrap.min.js' %}"></script>
 <script src="{% static 'js/mdb.min.js' %}"></script>
 <script src="{% static 'assets/font-awesome/js/all.min.js' %}"></script>
+<script>
+    $(function () {
+        const states = {
+            "AL": "Alabama",
+            "AK": "Alaska",
+            "AS": "American Samoa",
+            "AZ": "Arizona",
+            "AR": "Arkansas",
+            "CA": "California",
+            "CO": "Colorado",
+            "CT": "Connecticut",
+            "DE": "Delaware",
+            "DC": "District Of Columbia",
+            "FM": "Federated States Of Micronesia",
+            "FL": "Florida",
+            "GA": "Georgia",
+            "GU": "Guam",
+            "HI": "Hawaii",
+            "ID": "Idaho",
+            "IL": "Illinois",
+            "IN": "Indiana",
+            "IA": "Iowa",
+            "KS": "Kansas",
+            "KY": "Kentucky",
+            "LA": "Louisiana",
+            "ME": "Maine",
+            "MH": "Marshall Islands",
+            "MD": "Maryland",
+            "MA": "Massachusetts",
+            "MI": "Michigan",
+            "MN": "Minnesota",
+            "MS": "Mississippi",
+            "MO": "Missouri",
+            "MT": "Montana",
+            "NE": "Nebraska",
+            "NV": "Nevada",
+            "NH": "New Hampshire",
+            "NJ": "New Jersey",
+            "NM": "New Mexico",
+            "NY": "New York",
+            "NC": "North Carolina",
+            "ND": "North Dakota",
+            "MP": "Northern Mariana Islands",
+            "OH": "Ohio",
+            "OK": "Oklahoma",
+            "OR": "Oregon",
+            "PW": "Palau",
+            "PA": "Pennsylvania",
+            "PR": "Puerto Rico",
+            "RI": "Rhode Island",
+            "SC": "South Carolina",
+            "SD": "South Dakota",
+            "TN": "Tennessee",
+            "TX": "Texas",
+            "UT": "Utah",
+            "VT": "Vermont",
+            "VI": "Virgin Islands",
+            "VA": "Virginia",
+            "WA": "Washington",
+            "WV": "West Virginia",
+            "WI": "Wisconsin",
+            "WY": "Wyoming"
+        }
+        $.each(states, function (key, value) {
+            var option = `<option class="text-black" value=${key}>${value}</option>`
+            $("#states-select").append(option);
+        });
+    });
+    $("#book-book").click(function () {
+        let data = {
+            "email" : $("#book-email").val(),
+            "address":$("#book-address").val(),
+            "city":$("#book-city").val(),
+            "zip":$("#book-zip").val(),
+            "state":$("#states-select").find(":selected").text(),
+            "name":$("#book-name").val(),
+            "phonenumber":$("#book-phone").val(),
+            "message":$("#book-message").val(),
+            "csrfmiddlewaretoken":"{{ csrf_token }}"
+        }       
+        
+        $.ajax({
+            url: "{% url 'book-pickup' %}",
+            type: "POST",
+            data: data,
+            cache: false,
+            success: function (resp) {
+                console.log(resp);
+            }
+        });
+
+    });
+
+
+</script>
 {% block scripts %}
 {% endblock %}
 </body>
