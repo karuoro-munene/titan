@@ -7,5 +7,6 @@ urlpatterns = [
     path("sea-shipping",views.sea, name="sea"),
     path("you-buy-we-ship",views.youbuyweship, name="you-buy-we-ship"),
     path("cost-calculator",views.pricing, name="pricing"),
-    path("contact-us",views.contact, name="contact"),
+    path("what-people-ship",views.whatpeopleship, name="what-people-ship"),
+    path("track-your-package",views.trackpackage, name="track-package"),
 ]

@@ -1,15 +1,17 @@
-
 @media (min-width: 1200px) {
     .container {
         padding: 0;
     }
 }
-.bg-color-scheme{
-    background: #6173FC!important;
+
+.bg-color-scheme {
+    background: #6173FC !important;
 }
-input{
-    color:black!important;
+
+input {
+    color: black !important;
 }
+
 body {
     font-family: 'Raleway';
     color: white;
@@ -166,7 +168,11 @@ td:last-child {
 }
 
 .flags {
-    background: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url(../img/us-kenya.png) no-repeat center center;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/us-kenya.png) no-repeat center center;
+}
+
+.nav-link:hover {
+    color: #6173FC !important;
 }
 
 .about {
@@ -230,13 +236,13 @@ td:last-child {
 }
 
 .air-banner {
-    background:linear-gradient(rgba(0, 0, 0, 0.7),
-    rgba(0, 0, 0, 0.7)),url(../img/air-trasport.png) center center no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.7)), url(../img/air-trasport.png) center center no-repeat;
 }
 
 .cost-banner {
-    background:linear-gradient(rgba(0, 0, 0, 0.7),
-    rgba(0, 0, 0, 0.7)),url(../img/pricing-banner.png) center center no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.7)), url(../img/pricing-banner.png) center center no-repeat;
 }
 
 .buy-ship-banner {
