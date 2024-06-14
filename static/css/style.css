@@ -166,7 +166,7 @@ td:last-child {
 }
 
 .flags {
-    background: linear-gradient(rgba(0, 0, 0, 0.1),rgba(0, 0, 0, 0.1)), url(../img/us-kenya.png) no-repeat center center;
+    background: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url(../img/us-kenya.png) no-repeat center center;
 }
 
 .about {
@@ -226,20 +226,22 @@ td:last-child {
 
 .sea-banner {
     background: linear-gradient(rgba(0, 0, 0, 0.7),
-    rgba(0, 0, 0, 0.7)), url(../img/sea-banner-bg.jpg) center center no-repeat;
+    rgba(0, 0, 0, 0.7)), url(../img/sea-banner.png) center center no-repeat;
 }
 
 .air-banner {
-    background:url(../img/air-trasport.png) center center no-repeat;
+    background:linear-gradient(rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.7)),url(../img/air-trasport.png) center center no-repeat;
 }
 
 .cost-banner {
-    background:url(../img/pricing-banner.png) center center no-repeat;
+    background:linear-gradient(rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.7)),url(../img/pricing-banner.png) center center no-repeat;
 }
 
 .buy-ship-banner {
     background: linear-gradient(rgba(0, 0, 0, 0.7),
-    rgba(0, 0, 0, 0.7)), url(../img/buy-ship-banner-bg.png) center center no-repeat;
+    rgba(0, 0, 0, 0.7)), url(../img/us-kenya.png) center center no-repeat;
 }
 
 .contact-banner {
