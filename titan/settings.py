@@ -75,7 +75,7 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
-
+CSRF_TRUSTED_ORIGINS = ["https://titan.cyprian.dev"]
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.mail.yahoo.com'
