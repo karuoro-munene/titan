@@ -67,103 +67,44 @@
 </head>
 <body>
 <nav class="navbar navbar-expand-lg  blue-bg navbar-dark fixed-top fw-bold">
-        <!-- Container wrapper -->
-        <div class="container-fluid px-5">
+    <!-- Container wrapper -->
+    <div class="container-fluid px-5">
+        <!-- Navbar brand -->
+        <a class="navbar-brand" href="{% url 'home' %}"><img style="max-height: 60px;"
+                                                             src="{% static 'img/logo-cropped.png' %}"
+                                                             alt="logo"></a>
+        <!-- Toggle button -->
+        <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
+                data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
 
-            <!-- Navbar brand -->
-            <a class="navbar-brand" href="{% url 'home' %}"><img style="max-height: 60px;"
-                                                                 src="{% static 'img/logo-cropped.png' %}"
-                                                                 alt="logo"></a>
+        <!-- Collapsible wrapper -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
-            <!-- Toggle button -->
-            <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
-                    data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                <i class="fas fa-bars"></i>
-            </button>
+            </ul>
 
-            <!-- Collapsible wrapper -->
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <!-- Icons -->
+            <ul class="navbar-nav d-flex flex-row me-1">
 
-                </ul>
+                <li class="nav-item me-lg-0"><a class="nav-link" href="{% url 'home' %}">Home</a></li>
+                <li class="nav-item me-lg-0"><a class="nav-link" href="{% url 'air' %}">Air Shipping</a></li>
+                <li class="nav-item me-lg-0"><a class="nav-link" href="{% url 'sea' %}">Sea Shipping</a></li>
+                <li class="nav-item me-lg-0"><a class="nav-link" href="{% url 'you-buy-we-ship' %}">You Buy - We
+                    Ship</a></li>
+                <li class="nav-item me-lg-0"><a class="nav-link" href="{% url 'pricing' %}">Cost Calculator</a></li>
+                <li class="nav-item me-lg-0"><a class="nav-link" href="{% url 'contact' %}">What People Ship</a></li>
+                <li class="nav-item me-lg-0"><a class="nav-link" href="{% url 'contact' %}">Tracking</a></li>
+                <li class="nav-item me-lg-0"><a class="nav-link" href="{% url 'contact' %}">Contact Us</a></li>
+            </ul>
 
-                <!-- Icons -->
-                <ul class="navbar-nav d-flex flex-row me-1">
-
-                    <li class="nav-item me-lg-0"><a class="nav-link" href="{% url 'home' %}">Home</a></li>
-                    <li class="nav-item me-lg-0"><a class="nav-link" href="{% url 'air' %}">Air Shipping</a></li>
-                    <li class="nav-item me-lg-0"><a class="nav-link" href="{% url 'sea' %}">Sea Shipping</a></li>
-                    <li class="nav-item me-lg-0"><a class="nav-link" href="{% url 'you-buy-we-ship' %}">You Buy - We Ship</a></li>
-                    <li class="nav-item me-lg-0"><a class="nav-link" href="{% url 'pricing' %}">Cost Calculator</a></li>
-                    <li class="nav-item me-lg-0"><a class="nav-link" href="{% url 'contact' %}">What People Ship</a></li>
-                    <li class="nav-item me-lg-0"><a class="nav-link" href="{% url 'contact' %}">Tracking</a></li>
-                    <li class="nav-item me-lg-0"><a class="nav-link" href="{% url 'contact' %}">Contact Us</a></li>
-
-                </ul>
-
-            </div>
         </div>
-        <!-- Container wrapper -->
-    </nav>
+    </div>
+    <!-- Container wrapper -->
+</nav>
 <div id="page-wrapper">
-
-    {#    <header class="header home-page-two">#}
-    {#        <div class="top-bar-home-two">#}
-    {#            <div class="thm-container clearfix">#}
-    {#                <div class="left-contact-info pull-left">#}
-    {#                    <ul class="list-inline">#}
-    {#                        <li><p><i class="fa fa-phone"></i> + (206) 730 2488</p></li><!--#}
-    {#    					-->#}
-    {#                        <li><p><i class="fa fa-envelope-o"></i> info@titanshippers.com</p></li><!--#}
-    {#    					-->#}
-    {#                    </ul><!-- /.list-inline -->#}
-    {#                </div><!-- /.left-contact-info -->#}
-    {#                <div class="right-social pull-right">#}
-    {#                    <ul class="list-inline">#}
-    {#                        <li><a target=”_blank” href="https://www.facebook.com/aquariumcabanasnrb"#}
-    {#                               class="fa fa-facebook"></a></li>#}
-    {#                    </ul><!-- /.list-inline -->#}
-    {#                </div><!-- /.right-contact-info pull-right -->#}
-    {#            </div><!-- /.thm-container -->#}
-    {#        </div><!-- /.top-bar-home-two -->#}
-    {#        <nav class="navbar navbar-default header-navigation stricky">#}
-    {#            <div class="thm-container clearfix">#}
-    {#                <!-- Brand and toggle get grouped for better mobile display -->#}
-    {#                <div class="navbar-header">#}
-    {#                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"#}
-    {#                            data-target=".main-navigation" aria-expanded="false">#}
-    {#                        <span class="sr-only">Toggle navigation</span>#}
-    {#                        <span class="icon-bar"></span>#}
-    {#                        <span class="icon-bar"></span>#}
-    {#                        <span class="icon-bar"></span>#}
-    {#                    </button>#}
-    {#                    <a class="navbar-brand" href="{% url 'home' %}"#}
-    {#                       style="padding-top:5px!important;padding-bottom:5px!important">#}
-    {#                        <img src="{% static 'img/logo-cropped.png' %}" alt="logo">#}
-    {#                    </a>#}
-    {#                </div>#}
-    {##}
-    {#                <!-- Collect the nav links, forms, and other content for toggling -->#}
-    {#                <div class="collapse navbar-collapse main-navigation" id="main-nav-bar">#}
-    {##}
-    {##}
-    {#                    <ul class="nav navbar-nav navigation-box">#}
-    {#                        <li><a href="{% url 'about' %}">Home</a></li>#}
-    {#                        <li><a href="{% url 'air' %}">Air Shipping</a></li>#}
-    {#                        <li><a href="{% url 'sea' %}">Sea Shipping</a></li>#}
-    {#                        <li><a href="{% url 'you-buy-we-ship' %}">You Buy - We Ship</a></li>#}
-    {#                        <li><a href="{% url 'pricing' %}">Cost Calculator</a></li>#}
-    {#                        <li><a href="{% url 'contact' %}">Contact Us</a></li>#}
-    {#                    </ul>#}
-    {##}
-    {#                </div>#}
-    {##}
-    {#            </div>#}
-    {#        </nav>#}
-    {#    </header>#}
-    
-    <!-- Navbar -->
     {% block content %}
     {% endblock %}
     <footer class="footer">
@@ -182,19 +123,20 @@
                         <p class="phone-number"><a class="addr" target="_blank" href="tel://(206) 730 2488">(206) 730
                             2488</a></p><!-- /.phone-number -->
                         <p class="address mb-2"><a class="addr" target="_blank"
-                                              href="https://maps.app.goo.gl/s4mEaYRGBxJ9m98W9">418 112St East Suite B,<br>
+                                                   href="https://maps.app.goo.gl/s4mEaYRGBxJ9m98W9">418 112St East Suite
+                            B,<br>
                             Tacoma, WA 98445</a>
                         </p>
                         <p><a class="addr" target="_blank"
-                                                          href="mailto:info@titanshippers.com">info@titanshippers.com</a></p>
+                              href="mailto:info@titanshippers.com">info@titanshippers.com</a></p>
                         <div class="px-2">
-                            
+
                             <a target="_blank" href="https://www.facebook.com/aquariumcabanasnrb"
-                               ><i class="fab fa-facebook-square fa-2x"></i></a>
+                            ><i class="fab fa-facebook-square fa-2x"></i></a>
                             <a target="_blank" href="https://www.instagram.com/titanshippers"
-                               ><i class="fab fa-instagram fa-2x"></i></a>
+                            ><i class="fab fa-instagram fa-2x"></i></a>
                             <a target="_blank" href="https://wa.me/+12067302488"
-                               ><i class="fab fa-whatsapp-square fa-2x"></i></a>
+                            ><i class="fab fa-whatsapp-square fa-2x"></i></a>
                         </div>
 
                     </div>
@@ -208,10 +150,12 @@
                         <p style="margin-bottom: 10px!important;">Leave your phone and address for us to pick up your
                             packages.</p>
                         <div id="book-pick-up" class="">
-                            <button class="btn-block fw-bold shadow-3-strong" style="padding-top: 3px!important;padding-bottom: 3px!important;">
-                              Book Now  </button>
+                            <button class="btn-block fw-bold shadow-3-strong"
+                                    style="padding-top: 3px!important;padding-bottom: 3px!important;">
+                                Book Now
+                            </button>
                         </div>
-                        
+
                     </div>
                 </div>
             </div>
