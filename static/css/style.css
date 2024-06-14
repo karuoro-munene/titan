@@ -1,12 +1,15 @@
-/**************************
-* 2. miscelnious styles
-***************************/
+
 @media (min-width: 1200px) {
     .container {
         padding: 0;
     }
 }
-
+.bg-color-scheme{
+    background: #6173FC!important;
+}
+input{
+    color:black!important;
+}
 body {
     font-family: 'Raleway';
     color: white;
@@ -227,12 +230,11 @@ td:last-child {
 }
 
 .air-banner {
-    background:url(../img/air-banner.png) center center no-repeat;
+    background:url(../img/air-trasport.png) center center no-repeat;
 }
 
 .cost-banner {
-    background: linear-gradient(rgba(0, 0, 0, 0.7),
-    rgba(0, 0, 0, 0.7)), url(../img/cost-calculator-bg.jpg) center center no-repeat;
+    background:url(../img/pricing-banner.png) center center no-repeat;
 }
 
 .buy-ship-banner {

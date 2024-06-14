@@ -5,13 +5,10 @@
     <section class="inner-banner cost-banner">
         <div class="thm-container">
             <div class="title">
-                <h3>Cost Calculator</h3>
-                <div class="line"></div><!-- /.line -->
+                <h3 class="py-4">Cost Calculator</h3>
+                <h4 class="fw-bold">We Care about your Pocket</h4>
             </div><!-- /.title -->
-            <div class="bread-cumb">
-                <a href="{% url 'home' %}">Home</a><span class="sep">></span><span
-                    class="page-name">Cost Calculator</span>
-            </div><!-- /.bread-cumb pull-right -->
+            <!-- /.bread-cumb pull-right -->
         </div><!-- /.thm-container -->
     </section><!-- /.inner-banner -->
 
@@ -26,44 +23,61 @@
                 </div><!-- /.col-md-12 -->
             </div><!-- /.row -->
             <h4 style="margin-bottom: 10px!important;">Air Shipping Calculator</h4>
-            <div class="row">
+            <div class="row mb-5">
 
-                <div class="col-md-6">
+                <div class="col-md-6 mb-4">
                     <form id="cost-calculator">
-                        <div class="form-group row">
-                            <label for="length" class="col-sm-2 col-form-label">Length</label>
-                            <div class="col-sm-10">
+                        <div class="form-group row mb-2">
+                            <label for="length" class="col-sm-3 col-form-label fw-bold">Actual Weight</label>
+                            <div class="col-sm-9">
+                                <input type="number" class="form-control" id="air-actual-weight"
+                                       placeholder="Actual weight (pounds)">
+                            </div>
+                        </div>
+                        <div class="form-group row mb-2">
+                            <label for="length" class="col-sm-3 col-form-label fw-bold">Length</label>
+                            <div class="col-sm-9">
                                 <input type="number" class="form-control" id="air-length"
                                        placeholder="Box length (inches)">
                             </div>
                         </div>
-                        <div class="form-group row">
-                            <label for="width" class="col-sm-2 col-form-label">Width</label>
-                            <div class="col-sm-10">
+                        <div class="form-group row mb-2">
+                            <label for="width" class="col-sm-3 col-form-label fw-bold">Width</label>
+                            <div class="col-sm-9">
                                 <input type="number" class="form-control" id="air-width"
                                        placeholder="Box width (inches)">
                             </div>
                         </div>
-                        <div class="form-group row">
-                            <label for="height" class="col-sm-2 col-form-label">Height</label>
-                            <div class="col-sm-10">
+                        <div class="form-group row mb-2">
+                            <label for="height" class="col-sm-3 col-form-label fw-bold">Height</label>
+                            <div class="col-sm-9">
                                 <input type="number" class="form-control" id="air-height"
                                        placeholder="Box height (inches)">
+                            </div>
+                        </div>
+                        <div class="form-group row mb-2">
+                            <label for="height" class="col-sm-3 col-form-label fw-bold">Volumetric Weight</label>
+                            <div class="col-sm-9">
+                                <input type="number" class="form-control" id="volumetric-weight"
+                                       placeholder="Volumetric weight" disabled>
                             </div>
                         </div>
 
                     </form>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 mb-5 pb-5">
                     <div class="form-group row">
                         <div class="col-sm-12">
-                            <button class="btn bg-color-scheme btn-block submit-btn" id="air-submit">Calculate</button>
+                            <button class="btn bg-color-scheme btn-block submit-btn fw-bold" id="air-submit">Calculate
+                            </button>
                         </div>
                     </div>
                     <div class="form-group row">
                         <div class="col-sm-12">
-                            <h4 class="text-center" id="air-actual-cost"></h4>
-                            <h3 class="text-center" id="air-you-pay"></h3>
+                            <h5 class="text-center" id="volumetric-text"></h5>
+                            <h5 class="text-center" id="actual-text"></h5>
+                            <h5 class="text-center" id="air-exact-cost"></h5>
+                            <h5 class="text-center" id="air-rounded-cost"></h5>
                         </div>
                     </div>
                     <div></div>
@@ -72,25 +86,25 @@
             <h4>Sea Shipping Calculator</h4>
             <div class="row">
 
-                <div class="col-md-6">
+                <div class="col-md-6 mb-4 pb-5">
                     <form id="cost-calculator">
                         <div class="form-group row">
                             <label for="length" class="col-sm-2 col-form-label">Length</label>
-                            <div class="col-sm-10">
+                            <div class="col-sm-9">
                                 <input type="number" class="form-control" id="sea-length"
                                        placeholder="Box length (inches)">
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="width" class="col-sm-2 col-form-label">Width</label>
-                            <div class="col-sm-10">
+                            <div class="col-sm-9">
                                 <input type="number" class="form-control" id="sea-width"
                                        placeholder="Box width (inches)">
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="height" class="col-sm-2 col-form-label">Height</label>
-                            <div class="col-sm-10">
+                            <div class="col-sm-9">
                                 <input type="number" class="form-control" id="sea-height"
                                        placeholder="Box height (inches)">
                             </div>
@@ -103,13 +117,13 @@
                 <div class="col-md-6">
                     <div class="form-group row">
                         <div class="col-sm-12">
-                            <button class="btn bg-color-scheme btn-block" id="sea-submit">Calculate</button>
+                            <button class="btn bg-color-scheme btn-block fw-bold" id="sea-submit">Calculate</button>
                         </div>
                     </div>
                     <div class="form-group row">
                         <div class="col-sm-12">
-                            <h4 class="text-center" id="cost"></h4>
-                            <h3 class="text-center" id="cost1"></h3>
+                            <h4 class="text-center" id="sea-exact-cost"></h4>
+                            <h3 class="text-center" id="sea-rounded-cost"></h3>
                         </div>
                     </div>
                     <div></div>
@@ -121,6 +135,48 @@
 {% endblock %}
 {% block scripts %}
     <script>
+
+        let air_length;
+        let air_width;
+        let air_height;
+        let volumetric;
+
+        $("#air-length").change(function () {
+            air_length = $("#air-length").val();
+            air_length = parseInt(air_length);
+            console.log(typeof air_length);
+
+        });
+        $("#air-width").change(function () {
+            air_width = $("#air-width").val();
+            air_width = parseInt(air_width)
+        });
+        $("#air-height").change(function () {
+            air_height = $("#air-height").val();
+            air_height = parseInt(air_height)
+            volumetric = ((air_height * air_width * air_length) / 366) * 2.2;
+            $("#volumetric-weight").val(volumetric);
+            console.log(volumetric)
+        });
+
+
+        $("#air-submit").click(function () {
+
+            let weight = $("#air-actual-weight").val();
+            let volumetric = $("#volumetric-weight").val();
+            volumetric = parseInt(volumetric);
+            var cost;
+            if ((volumetric > weight) || (volumetric == weight)) {
+                cost = volumetric * 8;
+            } else {
+                cost = weight * 8;
+            }
+            $("#volumetric-text").text(`Volumetric weight = ${volumetric.toFixed(2)} LBs`);
+            $("#actual-text").text(`Actual weight = ${weight} LBs`);
+            $("#air-exact-cost").text(`Exact charges = $${cost.toFixed(2)}`);
+            $("#air-rounded-cost").text(`You pay $${Math.round(cost.toFixed(2))}.00`);
+
+        });
         $("#sea-submit").click(function () {
 
             const length = $("#sea-length").val();
@@ -129,8 +185,9 @@
 
             var cost;
             cost = ((height * width * length) / 1728) * 30;
-            $("#cost").text(`Exact charges = $${cost.toFixed(2)}`);
-            $("#cost1").text(`You pay $${Math.round(cost.toFixed(2))}.00`);
+
+            $("#sea-actual-cost").text(`Exact charges = $${cost.toFixed(2)}`);
+            $("#sea-rounded-cost").text(`You pay $${Math.round(cost.toFixed(2))}.00`);
 
         });
     </script>
