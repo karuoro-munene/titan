@@ -35,12 +35,12 @@ def trackpackage(request):
 
 def processbook(request):
     dict = request.POST.dict()
-    send_mail(
-        "Someone just booked a pick up",
-        f"Name: {dict['name']}, Address: {dict['address']}, {dict['city']}, {dict['state']}, {dict['zip']}, Phonenumber: {dict['']}, Message: {dict['message']}",
-        "from@example.com",
-        ["to@example.com"],
-        fail_silently=
-    False,
-    )
+    # send_mail(
+    #     "Someone just booked a pick up",
+    #     f"Name: {dict['name']}, Address: {dict['address']}, {dict['city']}, {dict['state']}, {dict['zip']}, Phonenumber: {dict['']}, Message: {dict['message']}",
+    #     "from@example.com",
+    #     ["to@example.com"],
+    #     fail_silently=
+    # False,
+    # )
     return HttpResponse(json.dumps(dict), content_type='application/json')
