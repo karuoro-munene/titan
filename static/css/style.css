@@ -227,8 +227,7 @@ td:last-child {
 }
 
 .air-banner {
-    background: linear-gradient(rgba(0, 0, 0, 0.6),
-    rgba(0, 0, 0, 0.6)), url(../img/air-banner-bg.jpg) center center no-repeat;
+    background:url(../img/air-banner.png) center center no-repeat;
 }
 
 .cost-banner {
