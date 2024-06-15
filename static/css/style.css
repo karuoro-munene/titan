@@ -259,8 +259,8 @@ td:last-child {
     rgba(0, 0, 0, 0.7)), url(../img/us-kenya.png) center center no-repeat;
 }
 .what-we-banner {
-    background: linear-gradient(rgba(0, 0, 0, 0.7),
-    rgba(0, 0, 0, 0.7)), url(../img/what-people-ship.png) center center no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.1)), url(../img/what-people-ship.png) center center no-repeat;
 }
 
 .contact-banner {
