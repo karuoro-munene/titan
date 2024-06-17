@@ -101,7 +101,7 @@
                 <li class="nav-item me-lg-0"><a class="nav-link" href="{% url 'pricing' %}">Cost Calculator</a></li>
                 <li class="nav-item me-lg-0"><a class="nav-link" href="{% url 'what-people-ship' %}">What People
                     Ship</a></li>
-{#                <li class="nav-item me-lg-0"><a class="nav-link" href="{% url 'track-package' %}">Tracking</a></li>#}
+                {#                <li class="nav-item me-lg-0"><a class="nav-link" href="{% url 'track-package' %}">Tracking</a></li>#}
                 <li class="nav-item me-lg-0"><span
                         class="nav-link btn text-capitalize bg-color-scheme" id="book-nav" data-bs-toggle="modal"
                         data-bs-target="#book-pickup">Book
@@ -126,8 +126,9 @@
                                                                             alt="footer"/></a>
                     </div>
                 </div><!-- /.col-md-3 -->
-                <div class="col-md-5 mb-5">
+                <div class="col-md-3 mb-5">
                     <div class="about-widget footer-widget ">
+                        <h3>US. Office</h3>
                         <h5 class="phone-number fw-bold mb-3"><a class="addr" target="_blank"
                                                                  href="tel://(206) 730 2488">(206) 730
                             2488</a></h5><!-- /.phone-number -->
@@ -149,8 +150,23 @@
 
                     </div>
                 </div><!-- /.col-md-3 -->
+                <div class="col-md-3 mb-5">
+                    <div class="about-widget footer-widget ">
+                        <h3>Kenya Office</h3>
+                        <h5 class="phone-number fw-bold mb-3"><a class="addr" target="_blank"
+                                                                 href="tel://+254707041064">+254 707 041-064
+                        </a></h5><!-- /.phone-number -->
+                        <p class="address mb-3"><a class="addr" target="_blank"
+                                                   href="https://maps.app.goo.gl/k4sSpgFu3Nh3mE3aA">Syzo International
+                            Godowns,<br>Next to Northlands city,<br>Near Future Gaz Station,<br>Eastern Bypass,<br> Nairobi
 
-                <div class="col-md-4 mb-5">
+                        </a>
+                        </p>
+
+                    </div>
+                </div><!-- /.col-md-3 -->
+
+                <div class="col-md-3 mb-5">
                     <div class="footer-widget subscribe-widget">
                         <div class="title">
                             <h3>Book a Pick-Up</h3>
@@ -319,17 +335,17 @@
     });
     $("#book-book").click(function () {
         let data = {
-            "email" : $("#book-email").val(),
-            "address":$("#book-address").val(),
-            "city":$("#book-city").val(),
-            "zip":$("#book-zip").val(),
-            "state":$("#states-select").find(":selected").text(),
-            "name":$("#book-name").val(),
-            "phonenumber":$("#book-phone").val(),
-            "message":$("#book-message").val(),
-            "csrfmiddlewaretoken":"{{ csrf_token }}"
-        }       
-        
+            "email": $("#book-email").val(),
+            "address": $("#book-address").val(),
+            "city": $("#book-city").val(),
+            "zip": $("#book-zip").val(),
+            "state": $("#states-select").find(":selected").text(),
+            "name": $("#book-name").val(),
+            "phonenumber": $("#book-phone").val(),
+            "message": $("#book-message").val(),
+            "csrfmiddlewaretoken": "{{ csrf_token }}"
+        }
+
         $.ajax({
             url: "{% url 'book-pickup' %}",
             type: "POST",
