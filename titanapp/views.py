@@ -1,8 +1,9 @@
 import json
 
-from django.core.mail import send_mail
 from django.http import HttpResponse
 from django.shortcuts import render
+
+from .models import Booking
 
 
 def home(request):
@@ -35,12 +36,14 @@ def trackpackage(request):
 
 def processbook(request):
     dict = request.POST.dict()
-    # send_mail(
-    #     "Someone just booked a pick up",
-    #     f"Name: {dict['name']}, Address: {dict['address']}, {dict['city']}, {dict['state']}, {dict['zip']}, Phonenumber: {dict['']}, Message: {dict['message']}",
-    #     "from@example.com",
-    #     ["to@example.com"],
-    #     fail_silently=
-    # False,
-    # )
-    return HttpResponse(json.dumps(dict), content_type='application/json')
+    if request.method == 'POST':
+        try:
+            booking = Booking.objects.create(name=dict['name'],
+                                             address=f"{dict['address']}, {dict['city']},{dict['state']}, {dict['zip']}",
+                                             phonenumber=dict['phonenumber'], message=dict['message'])
+            booking.save()
+            message = {"message": "Booking successfully created"}
+        except Exception as e:
+            message = {"message": str(e)}
+
+    return HttpResponse(json.dumps(message), content_type='application/json')
