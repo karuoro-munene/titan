@@ -10,4 +10,5 @@ urlpatterns = [
     path("what-people-ship",views.whatpeopleship, name="what-people-ship"),
     path("track-your-package",views.trackpackage, name="track-package"),
     path("ajax/process-book-pickup",views.processbook, name="book-pickup"),
+    path("bookings",views.bookings, name="bookings"),
 ]

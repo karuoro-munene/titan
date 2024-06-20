@@ -33,6 +33,9 @@ def whatpeopleship(request):
 def trackpackage(request):
     return render(request, "track-package.html")
 
+def bookings(request):
+    return render(request, "bookings.html")
+
 
 def processbook(request):
     dict = request.POST.dict()
