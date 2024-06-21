@@ -82,16 +82,16 @@
                         <div class="col-md-12 mb-3 ">
                             <label class="text-muted mb-1">Select Status</label>
                             <select class="form-control text-black" aria-label="default-select" id="status-select">
-                                <option class="text-black" {% if package.status == 'Item in US Warehouse' %}
-                                        selected{% endif %} value="Item in US Warehouse">Item in US Warehouse
+                                <option class="text-black" {% if 'Item in US Warehouse' in package.status %}
+                                        selected {% endif %} value="Item in US Warehouse">Item in US Warehouse
                                 </option>
-                                <option class="text-black" {% if package.status == 'Item in Transit to Kenya' %}
-                                        selected{% endif %} value="Item in Transit to Kenya">Item in Transit to Kenya
+                                <option class="text-black" {% if 'Item in Transit to Kenya' in package.status %}
+                                        selected {% endif %} value="Item in Transit to Kenya">Item in Transit to Kenya
                                 </option>
-                                <option class="text-black" {% if package.status == 'Item in Kenyan Warehouse' %}
+                                <option class="text-black" {% if 'Item in Kenyan Warehouse' in package.status %}
                                         selected{% endif %} value="Item in Kenyan Warehouse">Item in Kenyan Warehouse
                                 </option>
-                                <option class="text-black" {% if package.status == 'Item Sent for Delivery (Kenya)' %}
+                                <option class="text-black" {% if 'Item Sent for Delivery (Kenya)' in package.status %}
                                         selected{% endif %} value="Item Sent for Delivery (Kenya)">Item Sent for
                                     Delivery
                                     (Kenya)
@@ -102,7 +102,7 @@
                 </div>
                 <div class="modal-footer border-0">
                     <button type="button" class="btn bg-color-scheme fw-bold text-capitalize btn-block"
-                            id="add-package-btn"> Add
+                            id="edit-package-btn"> Edit
                     </button>
                 </div>
             </div>
@@ -111,4 +111,32 @@
 
 {% endblock %}
 {% block scripts %}
+    <script>
+        $(function () {
+            $("#edit-package-btn").click(function () {
+                let data = {
+                    "id": "{{ package.id }}",
+                    "name": $("#sender-name").val(),
+                    "phonenumber": $("#sender-phonenumber").val(),
+                    "invoice": $("#package-invoice").val(),
+                    "status": $("#status-select").find(":selected").text(),
+                    "csrfmiddlewaretoken": "{{ csrf_token }}"
+                }
+                $.ajax({
+                    url: "{% url 'edit-package' %}",
+                    type: "POST",
+                    data: data,
+                    cache: false,
+                    success: function (resp) {
+                        console.log(resp);
+                        var myModalEl = document.getElementById('edit-package');
+                        var modal = bootstrap.Modal.getInstance(myModalEl)
+                        modal.hide();
+                        location.reload();
+                    }
+                });
+
+            });
+        });
+    </script>
 {% endblock %}

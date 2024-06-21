@@ -120,7 +120,7 @@ def editpackage(request):
             package.status = dict['status']
             package.phonenumber = dict['phonenumber']
             package.save()
-            message = {"message": "Package successfully saved"}
+            message = {"message": "Package successfully edited"}
         except Exception as e:
             message = {"message": str(e)}
     # TWILIO: 5JWQ9NEYZNB7W9MX7G7DLP37

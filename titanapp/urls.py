@@ -11,6 +11,7 @@ urlpatterns = [
     path("track-your-package", views.trackpackage, name="track-package"),
     path("ajax/process-book-pickup", views.processbook, name="book-pickup"),
     path("ajax/add-package", views.addpackage, name="add-package"),
+    path("ajax/edit-package", views.editpackage, name="edit-package"),
     path("administration", views.administration, name="administration"),
     path("administration/manage-packages", views.managepackages, name="manage-packages"),
     path("administration/package/id/<int:id>", views.package, name="package"),
