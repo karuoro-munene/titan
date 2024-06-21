@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load humanize %}
+{% block content %}
+    <section class="about-section about-page">
+        <div class="thm-container">
+            <div class="row">
+                <div class="col-md-12 content-box">
+                    <div class="sec-title mt-5 mb-5">
+                        <h3>Booking</h3>
+                    </div>
+
+                    <div class="row">
+                            <table class="table table-borderless w-auto">
+                                <tbody>
+                                <tr>
+                                    <th>Sender's Name</th>
+                                    <td>{{ booking.name }}</td>
+                                </tr>
+                                <tr>
+                                    <th>Phone Number</th>
+                                    <td>{{ booking.phonenumber }}</td>
+                                </tr>
+                                <tr>
+                                    <th>Address</th>
+                                    <td>{{ booking.address }}</td>
+                                </tr>
+                                <tr>
+                                    <th>Pick-up Notes</th>
+                                    <td>{{ booking.message }}</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                    </div>
+                </div><!-- /.row -->
+            </div><!-- /.thm-container -->
+            </div><!-- /.thm-container -->
+
+    </section><!-- /.you buy - we ship-section -->
+    <hr>
+
+{% endblock %}

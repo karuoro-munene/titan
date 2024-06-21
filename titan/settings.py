@@ -10,6 +10,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'django.contrib.humanize',
     'django.contrib.staticfiles',
     'titanapp'
 ]
@@ -83,3 +84,5 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = 'me@gmail.com'
 EMAIL_HOST_PASSWORD = 'password'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+LOGIN_REDIRECT_URL = "/"
+LOGOUT_REDIRECT_URL = "/"

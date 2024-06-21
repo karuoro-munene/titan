@@ -1,0 +1,135 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Admin Login - Titan Shippers</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Developer: Cyprian Munene, Website: https://cyprian.dev, Email: hi@cyprian.dev"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'img/logo-cropped.png' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+          rel="stylesheet">
+    <link href="{% static 'assets/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet"/>
+    <link href="{% static 'css/mdb.min.css' %}" rel="stylesheet"/>
+    <link href="{% static 'assets/font-awesome/css/all.min.css' %}" rel="stylesheet"/>
+
+
+    <style>
+        * {
+            font-family: "Raleway", sans-serif !important;
+            font-optical-sizing: auto;
+        }
+
+        body {
+            background: rgb(9, 19, 54);
+            background: linear-gradient(90deg, rgba(9, 19, 54, 1) 0%, rgba(26, 48, 87, 1) 80%);
+        }
+
+        .dt-paging-button page-item disabled {
+            color: black !important;
+        }
+
+        * {
+            color: white !important;
+        }
+
+        .form-select-sm > option {
+            color: black !important;
+        }
+
+        .addr {
+            color: gray;
+        }
+
+        .addr:hover {
+            color: #5E68FF;
+        }
+
+        .submit-btn:hover {
+            color: white;
+        }
+
+        .submit-btn:focus {
+            outline: none;
+            color: white;
+        }
+
+
+        .blue-bg {
+            background: rgb(9, 19, 54) !important;
+            background: linear-gradient(90deg, rgba(9, 19, 54, 1) 0%, rgba(26, 48, 87, 1) 80%) !important;
+            color: white;
+        }
+
+        .big {
+            font-size: 54px !important;
+        }
+
+        p {
+            font-size: 17px !important;
+            line-height: 24px !important;
+        }
+
+        #book-nav:hover {
+            color: white !important;
+        }
+
+        .pagination {
+            color: black !important;
+        }
+
+        .clickable-row {
+            cursor: pointer;
+        }
+    </style>
+    {% block styles %}
+    {% endblock %}
+</head>
+<body>
+<div class="container-fluid">
+
+    <form class="row vh-100 align-items-center justify-content-center" method="POST">
+        {% csrf_token %}
+        <div class="col-md-4 ">
+            {% if form.errors%}
+                <div class="alert bg-danger alert-dismissible fade show" role="alert">
+                    <strong>Invalid Credentials!</strong>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            {% endif %}
+            <div class="text-center">
+
+                <h3>Admin Login</h3>
+            </div>
+            <div class=" mb-3">
+                <label for="username">Username</label>
+                <input type="text" class="form-control" autofocus autocomplete="username" required id="username"
+                       placeholder="email@example.com" name="username">
+            </div>
+            <div class=" mb-3">
+                <label for="password">password</label>
+                <input type="password" class="form-control" id="password"
+                       placeholder="Enter password" name="password" required>
+            </div>
+            <div class="mb-3">
+                <input type="submit" value="Submit" class="btn-block text-white bg-color-scheme">
+
+            </div>
+        </div>
+
+    </form>
+
+
+</div>
+
+
+<script src="{% static 'assets/jquery.js' %}"></script>
+<script src="{% static 'assets/bootstrap/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/mdb.min.js' %}"></script>
+<script src="{% static 'assets/font-awesome/js/all.min.js' %}"></script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load humanize %}
+{% block content %}
+    <section class="about-section about-page">
+        <div class="thm-container">
+            <div class="row">
+                <div class="container  px-4 content-box ">
+                    <div class="sec-title mt-5">
+                        <h4>Administration</h4>
+                        <p>Perform management tasks here</p>
+                    </div><!-- /.sec-title -->
+                    <div class="row gx-1 mt-3 text-center">
+                        <div class="col-md rounded border border-1 m-2 py-3">
+                            <p>Manage Bookings</p>
+                            <a type="button" class="bg-color-scheme btn mb-3"
+                               href="{% url 'manage-bookings' %}">Manage</a>
+                        </div>
+                        <div class="col-md rounded border border-1 m-2 py-3">
+                            <p>Manage Packages</p>
+                            <a type="button" class="bg-color-scheme btn mb-3"
+                               href="{% url 'manage-packages' %}">Manage</a>
+                        </div>
+
+                    </div>
+                </div><!-- /.col-md-12 -->
+            </div><!-- /.row -->
+        </div><!-- /.thm-container -->
+
+    </section><!-- /.you buy - we ship-section -->
+    <hr>
+
+{% endblock %}

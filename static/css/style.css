@@ -267,6 +267,10 @@ td:last-child {
     background: linear-gradient(rgba(0, 0, 0, 0.7),
     rgba(0, 0, 0, 0.7)), url(../img/contact-banner-bg.jpg) center center no-repeat;
 }
+.track-banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.7)), url(../img/kenya-us.png) center center no-repeat;
+}
 
 .inner-banner {
     height: 85vh !important;

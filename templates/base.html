@@ -5,7 +5,7 @@
     <meta charset="UTF-8"/>
     <title>Titan Shippers</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="Developer: Cyprian Munene, Website: https://cyprian.dev, Email: hi@cyprian.dev" />
+    <meta name="author" content="Developer: Cyprian Munene, Website: https://cyprian.dev, Email: hi@cyprian.dev"/>
     <link rel="icon" type="image/png" sizes="32x32" href="{% static 'img/logo-cropped.png' %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,7 +15,6 @@
     <link href="{% static 'assets/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet"/>
     <link href="{% static 'css/mdb.min.css' %}" rel="stylesheet"/>
     <link href="{% static 'assets/font-awesome/css/all.min.css' %}" rel="stylesheet"/>
-
 
 
     <style>
@@ -29,8 +28,16 @@
             background: linear-gradient(90deg, rgba(9, 19, 54, 1) 0%, rgba(26, 48, 87, 1) 80%);
         }
 
+        .dt-paging-button page-item disabled {
+            color: black !important;
+        }
+
         * {
             color: white !important;
+        }
+
+        .form-select-sm > option {
+            color: black !important;
         }
 
         .addr {
@@ -70,7 +77,16 @@
             color: white !important;
         }
 
+        .pagination {
+            color: black !important;
+        }
+
+        .clickable-row {
+            cursor: pointer;
+        }
     </style>
+    {% block styles %}
+    {% endblock %}
 </head>
 <body>
 <nav class="navbar navbar-expand-lg  blue-bg navbar-dark fixed-top fw-bold">
@@ -103,11 +119,47 @@
                 <li class="nav-item me-lg-0"><a class="nav-link" href="{% url 'pricing' %}">Cost Calculator</a></li>
                 <li class="nav-item me-lg-0"><a class="nav-link" href="{% url 'what-people-ship' %}">What People
                     Ship</a></li>
-                {#                <li class="nav-item me-lg-0"><a class="nav-link" href="{% url 'track-package' %}">Tracking</a></li>#}
+                {% if user.is_authenticated %}
+                    <li class="nav-item me-lg-0"><a class="nav-link" href="{% url 'track-package' %}">Tracking</a></li>
+                {% endif %}
                 <li class="nav-item me-lg-0"><span
                         class="nav-link btn text-capitalize bg-color-scheme" id="book-nav" data-bs-toggle="modal"
                         data-bs-target="#book-pickup">Book
                     Pickup</span></li>
+                {% if user.is_authenticated %}
+                    <li class="nav-item dropdown">
+                        <button class="nav-link dropdown-toggle"
+                                id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown"
+                                data-bs-display="static" aria-label="Toggle theme (dark)">
+                            <i class="fal fa-cog"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-lg-end text-black">
+                            <li>
+                                <a type="button" href="{% url 'administration' %}" class="dropdown-item text-black">
+                                    Administration
+                                </a>
+                            </li>
+                            <li>
+                                <a type="button" href="{% url 'manage-bookings' %}" class="dropdown-item text-black">
+                                    Manage Bookings
+                                </a>
+                            </li>
+                            <li>
+                                <a type="button" href="{% url 'manage-packages' %}" class="dropdown-item text-black">
+                                    Manage Packages
+                                </a>
+                            </li>
+                            <li>
+                                <form action="{% url 'logout' %}" method="post">
+                                    {% csrf_token %}
+                                    <button type="submit" class="dropdown-item text-black">
+                                        Logout
+                                    </button>
+                                </form>
+                            </li>
+                        </ul>
+                    </li>
+                {% endif %}
             </ul>
 
         </div>
@@ -124,7 +176,7 @@
                     <div class="about-widget footer-widget ">
                         <h5>US. Office</h5>
                         <p class="phone-number fw-bold mb-3"><a class="addr" target="_blank"
-                                                                 href="tel://(206) 730 2488">(206) 730
+                                                                href="tel://(206) 730 2488">(206) 730
                             2488</a></p><!-- /.phone-number -->
                         <p class="address mb-3"><a class="addr" target="_blank"
                                                    href="https://maps.app.goo.gl/s4mEaYRGBxJ9m98W9">418 112 St East,<br>
@@ -230,7 +282,7 @@
                 <div class="row">
                     <div class="col-md-6 mb-3 ">
                         <select class="form-control" aria-label="default-select" id="states-select">
-                            <option selected style="color:gray!important;">Select State</option>
+                            <option selected>Select State</option>
                         </select>
                     </div>
                     <div class="col-md-6 mb-3">

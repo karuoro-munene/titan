@@ -2,13 +2,23 @@
 {% load static %}
 
 {% block content %}
-    <section class="buy-ship-banner inner-banner">
+    <section class="track-banner inner-banner">
         <div class="thm-container">
             <div class="title">
                 <h3 class="py-4">Track Package</h3>
-                <h4 class="fw-bold">Enter your tracking number below</h4>
+                <p class="fw-bold">Enter your tracking number below</p>
+                <div class="row my-3">
+                    <div class="col-md-6">
+                        <form class="input-group">
+                            <input class="form-control" type="text" name="invoice-number" id="invoice-number"
+                                   placeholder="Enter invoice number">
+                            <button class="btn bg-color-scheme text-capitalize fw-bold" type="button"
+                                    id="button-addon2"> Track
+                            </button>
+                        </form>
+                    </div>
+                </div>
             </div><!-- /.title -->
-            
         </div><!-- /.thm-container -->
     </section><!-- /.inner-banner -->
 
@@ -23,7 +33,6 @@
             </div><!-- /.row -->
 
         </div><!-- /.thm-container -->
-        
 
 
     </section><!-- /.you buy - we ship-section -->
