@@ -16,10 +16,10 @@
                         <table id="all-packages" class="table table-striped table-bordered mt-3" style="width:100%">
                             <thead class="bg-color-scheme">
                             <tr class="fw-bolder">
-                                <th>Sender Name</th>
-                                <th>Phone No</th>
+{#                                <th>Sender Name</th>#}
+{#                                <th>Phone No</th>#}
                                 <th>Invoice Number</th>
-                                <th>Date Booked</th>
+{#                                <th>Date Booked</th>#}
                                 <th>Status</th>
                                 
                             </tr>
@@ -28,10 +28,10 @@
                             {% for pack in packages %}
 
                                 <tr class='clickable-row' data-href="{% url 'package' id=pack.id %}">
-                                    <td>{{ pack.name }}</td>
-                                    <td>{{ pack.phonenumber }}</td>
+{#                                    <td>{{ pack.name }}</td>#}
+{#                                    <td>{{ pack.phonenumber }}</td>#}
                                     <td>{{ pack.invoice_number }}</td>
-                                    <td>{{ pack.created | naturalday }}</td>
+{#                                    <td>{{ pack.created | naturalday }}</td>#}
                                     <td>{{ pack.status }}</td>
                                 </tr>
 
@@ -57,18 +57,18 @@
                             aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
+{#                    <div class="row text-black">#}
+{#                        <div class="col-md-12 mb-3">#}
+{#                            <input type="text" id="sender-name"#}
+{#                                   class="form-control" placeholder="Sender's name"/>#}
+{#                        </div>#}
+{#                    </div>#}
                     <div class="row text-black">
+{#                        <div class="col-md-6 mb-3">#}
+{#                            <input type="text" id="sender-phonenumber"#}
+{#                                   class="form-control" placeholder="Sender's phonenumber"/>#}
+{#                        </div>#}
                         <div class="col-md-12 mb-3">
-                            <input type="text" id="sender-name"
-                                   class="form-control" placeholder="Sender's name"/>
-                        </div>
-                    </div>
-                    <div class="row text-black">
-                        <div class="col-md-6 mb-3">
-                            <input type="text" id="sender-phonenumber"
-                                   class="form-control" placeholder="Sender's phonenumber"/>
-                        </div>
-                        <div class="col-md-6 mb-3">
                             <input type="text" id="package-invoice"
                                    class="form-control" placeholder="Invoice number"/>
                         </div>
@@ -79,12 +79,13 @@
                         <div class="col-md-12 mb-3 ">
                             <select class="form-control text-black" aria-label="default-select" id="status-select">
                                 <option class="text-black" selected>Select Status</option>
+                                <option class="text-black" value="Item Picked">Item Picked</option>
                                 <option class="text-black" value="Item in US Warehouse">Item in US Warehouse</option>
                                 <option class="text-black" value="Item in Transit to Kenya">Item in Transit to Kenya
                                 </option>
                                 <option class="text-black" value="Item in Kenyan Warehouse">Item in Kenyan Warehouse
                                 </option>
-                                <option class="text-black" value="Item Sent for Delivery (Kenya)">Item Sent for Delivery
+                                <option class="text-black" value="Item Dispatched for Delivery (Kenya)">Item Dispatched for Delivery
                                     (Kenya)
                                 </option>
                             </select>
@@ -106,8 +107,6 @@
         $(function () {
             $("#add-package-btn").click(function () {
                 let data = {
-                    "name": $("#sender-name").val(),
-                    "phonenumber": $("#sender-phonenumber").val(),
                     "invoice": $("#package-invoice").val(),
                     "status": $("#status-select").find(":selected").text(),
                     "csrfmiddlewaretoken": "{{ csrf_token }}"

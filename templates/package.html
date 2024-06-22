@@ -16,14 +16,14 @@
                     <div class="row">
                         <table class="table table-borderless w-auto">
                             <tbody>
-                            <tr>
-                                <th>Sender's Name</th>
-                                <td>{{ package.name }}</td>
-                            </tr>
-                            <tr>
-                                <th>Phone Number</th>
-                                <td>{{ package.phonenumber }}</td>
-                            </tr>
+{#                            <tr>#}
+{#                                <th>Sender's Name</th>#}
+{#                                <td>{{ package.name }}</td>#}
+{#                            </tr>#}
+{#                            <tr>#}
+{#                                <th>Phone Number</th>#}
+{#                                <td>{{ package.phonenumber }}</td>#}
+{#                            </tr>#}
                             <tr>
                                 <th>Invoice</th>
                                 <td>{{ package.invoice_number }}</td>
@@ -32,10 +32,10 @@
                                 <th>Status</th>
                                 <td>{{ package.status }}</td>
                             </tr>
-                            <tr>
-                                <th>Date Created</th>
-                                <td>{{ package.created }}</td>
-                            </tr>
+{#                            <tr>#}
+{#                                <th>Date Created</th>#}
+{#                                <td>{{ package.created }}</td>#}
+{#                            </tr>#}
                             </tbody>
                         </table>
                     </div>
@@ -55,21 +55,21 @@
                             aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
+{#                    <div class="row text-black">#}
+{#                        <div class="col-md-12 mb-3">#}
+{#                            <label class="text-muted mb-1">Sender's Name</label>#}
+{#                            <input type="text" id="sender-name"#}
+{#                                   class="form-control" placeholder="Sender's name" value="{{ package.name }}"/>#}
+{#                        </div>#}
+{#                    </div>#}
                     <div class="row text-black">
+{#                        <div class="col-md-6 mb-3">#}
+{#                            <label class="text-muted mb-1">Phone</label>#}
+{#                            <input type="text" id="sender-phonenumber"#}
+{#                                   class="form-control" placeholder="Sender's phonenumber"#}
+{#                                   value="{{ package.phonenumber }}"/>#}
+{#                        </div>#}
                         <div class="col-md-12 mb-3">
-                            <label class="text-muted mb-1">Sender's Name</label>
-                            <input type="text" id="sender-name"
-                                   class="form-control" placeholder="Sender's name" value="{{ package.name }}"/>
-                        </div>
-                    </div>
-                    <div class="row text-black">
-                        <div class="col-md-6 mb-3">
-                            <label class="text-muted mb-1">Phone</label>
-                            <input type="text" id="sender-phonenumber"
-                                   class="form-control" placeholder="Sender's phonenumber"
-                                   value="{{ package.phonenumber }}"/>
-                        </div>
-                        <div class="col-md-6 mb-3">
                             <label class="text-muted mb-1">Invoice Number</label>
                             <input type="text" id="package-invoice"
                                    class="form-control" placeholder="Invoice number"
@@ -82,6 +82,9 @@
                         <div class="col-md-12 mb-3 ">
                             <label class="text-muted mb-1">Select Status</label>
                             <select class="form-control text-black" aria-label="default-select" id="status-select">
+                                <option class="text-black" {% if 'Item Picked' in package.status %}
+                                        selected {% endif %} value="Item Picked">Item Picked
+                                </option>
                                 <option class="text-black" {% if 'Item in US Warehouse' in package.status %}
                                         selected {% endif %} value="Item in US Warehouse">Item in US Warehouse
                                 </option>
@@ -91,8 +94,8 @@
                                 <option class="text-black" {% if 'Item in Kenyan Warehouse' in package.status %}
                                         selected{% endif %} value="Item in Kenyan Warehouse">Item in Kenyan Warehouse
                                 </option>
-                                <option class="text-black" {% if 'Item Sent for Delivery (Kenya)' in package.status %}
-                                        selected{% endif %} value="Item Sent for Delivery (Kenya)">Item Sent for
+                                <option class="text-black" {% if 'Item Dispatched for Delivery (Kenya)' in package.status %}
+                                        selected{% endif %} value="Item Dispatched for Delivery (Kenya)">Item Sent for
                                     Delivery
                                     (Kenya)
                                 </option>
@@ -116,8 +119,6 @@
             $("#edit-package-btn").click(function () {
                 let data = {
                     "id": "{{ package.id }}",
-                    "name": $("#sender-name").val(),
-                    "phonenumber": $("#sender-phonenumber").val(),
                     "invoice": $("#package-invoice").val(),
                     "status": $("#status-select").find(":selected").text(),
                     "csrfmiddlewaretoken": "{{ csrf_token }}"

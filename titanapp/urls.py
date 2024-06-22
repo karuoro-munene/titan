@@ -17,4 +17,5 @@ urlpatterns = [
     path("administration/package/id/<int:id>", views.package, name="package"),
     path("administration/bookings", views.bookings, name="manage-bookings"),
     path("administration/booking/id/<int:id>", views.booking, name="booking"),
+    path("administration/update-tracking", views.updatetracking, name="updatetracking"),
 ]

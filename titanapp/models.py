@@ -19,17 +19,18 @@ class Booking(models.Model):
 
 
 stati = (
+    ("Item Picked", "Item Picked"),
     ("Item in US Warehouse", "Item in US Warehouse"),
     ("Item in Transit to Kenya", "Item in Transit to Kenya"),
     ("Item in Kenyan Warehouse", "Item in Kenyan Warehouse"),
-    ("Item Sent for Delivery (Kenya)", "Item Sent for Delivery (Kenya)"),
+    ("Item Dispatched for Delivery (Kenya)", "Item Dispatched for Delivery (Kenya)"),
 )
 
 
 class Package(models.Model):
     name = models.CharField(max_length=100, null=True, blank=True)
     phonenumber = models.CharField(max_length=100, null=True, blank=True)
-    invoice_number = models.CharField(max_length=100, null=True, blank=True)
+    invoice_number = models.CharField(max_length=100, unique=True, null=True, blank=True)
     status = models.CharField(max_length=100, choices=stati, default="Item in US Warehouse")
     created = models.DateTimeField(default=timezone.now)
     updated = models.DateTimeField(default=timezone.now)

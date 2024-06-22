@@ -9,10 +9,10 @@
                 <p class="fw-bold">Enter your tracking number below</p>
                 <div class="row my-3">
                     <div class="col-md-6">
-                        <form class="input-group">
-                            <input class="form-control" type="text" name="invoice-number" id="invoice-number"
+                        <form class="input-group" method="get" role="search">
+                            <input class="form-control" type="text" name="q" id="invoice-number"
                                    placeholder="Enter invoice number">
-                            <button class="btn bg-color-scheme text-capitalize fw-bold" type="button"
+                            <button class="btn bg-color-scheme text-capitalize fw-bold" type="submit"
                                     id="button-addon2"> Track
                             </button>
                         </form>
@@ -20,21 +20,52 @@
                 </div>
             </div><!-- /.title -->
         </div><!-- /.thm-container -->
-    </section><!-- /.inner-banner -->
-
-    <section class="about-section about-page">
         <div class="thm-container">
-            <div class="row flags">
+            <div class="row">
                 <div class="col-md-12 content-box">
-                    <div class="sec-title">
-                        <h2>Track Package</h2>
-                    </div><!-- /.sec-title -->
-                </div><!-- /.col-md-12 -->
-            </div><!-- /.row -->
+                    {% if package %}
+                        <div class="sec-title  d-flex justify-content-between">
+                            <h5>Package Details</h5>
+                        </div>
+                        <div class="row">
 
+                            <table class="table table-borderless w-auto">
+                                <tbody>
+                                <tr>
+                                    <th class="fw-bolder">Invoice:</th>
+                                    <td id="invoice-data">{{ package.invoice_number }}</td>
+                                </tr>
+                                <tr>
+                                    <th class="fw-bolder">Status:</th>
+                                    <td id="status-data">{{ package.status }}</td>
+                                </tr>
+                                </tbody>
+                            </table>
+
+
+                        </div>
+                    {% elif error %}
+                        <div class="sec-title  d-flex justify-content-between">
+                            <h5>Package Details</h5>
+                        </div>
+                        <div class="row">
+
+                            <table class="table table-borderless w-auto">
+                                <tbody>
+                                <tr>
+                                    <th class="fw-bolder">The package you requested cannot be tracked. Try another</th>
+                                </tr>
+                                </tbody>
+                            </table>
+
+
+                        </div>
+                    {% endif %}
+                </div><!-- /.row -->
+            </div><!-- /.thm-container -->
         </div><!-- /.thm-container -->
 
+    </section><!-- /.inner-banner -->
+    <br>
 
-    </section><!-- /.you buy - we ship-section -->
-    <hr>
 {% endblock %}

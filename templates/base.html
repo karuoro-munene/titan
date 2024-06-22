@@ -317,6 +317,28 @@
         </div>
     </div>
 </div>
+<div class="modal fade" id="pop-up" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header border-0">
+                <button id="modal-close" type="button" class="btn-close " data-mdb-ripple-init data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+                {% if 'air' in request.path %}
+                    <h4 class="py-3 text-black text-center">Weekly shipments to Nairobi!</h4>
+                {% elif 'sea' in request.path %}
+                    <h4 class="py-3 text-black text-center">Monthly shipments to Nairobi!</h4>
+                {% endif %}
+
+            </div>
+            <div class="modal-footer border-0">
+                <a type="button" class="btn bg-color-scheme fw-bold btn-block text-capitalize" data-bs-target="#book-pickup" data-bs-toggle="modal" data-bs-dismiss="modal"> Learn More </a>
+            </div>
+        </div>
+    </div>
+</div>
 
 <script>document.getElementById("current-year").innerHTML = new Date().getFullYear()</script>
 <script src="{% static 'assets/jquery.js' %}"></script>
@@ -422,7 +444,7 @@
         });
 
     });
-
+   
 
 </script>
 {% block scripts %}

@@ -17,18 +17,62 @@
                     <div class="sec-title">
                         <h2>Shipments every Week from Seattle</h2>
                     </div><!-- /.sec-title -->
-                    
+
                     <p class="small-margin"> Air shipment is done <span class="">every week. Packages are received, repackaged, and dispatched on Tuesdays. For most items, charges are based on weight and is done by taking the higher between volumetric weight and actual weight. Electronics like laptops and phones are charged per device. There is a minimum charge of $50 per shipment. Special rate applies for large consignments and shipments above 100 pounds</span>.
                     </p>
-                    <p class="small-margin"><span class="text-capitalize fw-bold">INSURANCE - </span> Air shipment is required to have insurance coverage at the rate of 2% for non-electronic items value and 5% for electronics.</span>.
+                    <p class="small-margin"><span class="text-capitalize fw-bold">INSURANCE - </span> Air shipment is
+                        required to have insurance coverage at the rate of 2% for non-electronic items value and 5% for
+                        electronics.</span>.
                     </p>
-                    <p class="small-margin"><span class="text-capitalize fw-bold">PRICING - </span> Use our <span class=""><a class="bg-color-scheme" href="{% url 'pricing' %}#air-shipping-calculator" >Cost Calculator</a> </span> to know the shipping price.
+                    <p class="small-margin"><span class="text-capitalize fw-bold">PRICING - </span> Use our <span
+                            class=""><a class="bg-color-scheme" href="{% url 'pricing' %}#air-shipping-calculator">Cost Calculator</a> </span>
+                        to know the shipping price.
                     </p>
-            
+
                 </div><!-- /.col-md-12 -->
             </div><!-- /.row -->
         </div><!-- /.thm-container -->
+        <div class="thm-container">
+            <div class="row">
+                <div class="col-md-12 content-box mt-5">
+                    <div class="sec-title">
+                        <h3>Costs for Air Packages</h3>
+                    </div><!-- /.sec-title -->
+                    <table class="table table-bordered table-striped w-100">
+                        <thead class="bg-color-scheme w-auto">
+                        <tr>
+                            <th scope="col">Actual Weight</th>
+                            <th scope="col">Cost</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>0-25 lbs</td>
+                            <td>$7 per lb</td>
+                        </tr>
+                        <tr>
+                            <td>Above 25 lbs</td>
+                            <td>$6 per lb</td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                </div><!-- /.col-md-12 -->
+            </div><!-- /.row -->
+
+        </div><!-- /.thm-container -->
+
 
     </section><!-- /.you buy - we ship-section -->
     <hr>
+{% endblock %}
+{% block scripts %}
+    <script>
+        $(window).on('load', function () {
+            var myModal = new bootstrap.Modal(document.getElementById("pop-up"), {});
+            window.setTimeout(document.onreadystatechange = function () {
+                myModal.show();
+            }, 2000);
+        });
+    </script>
 {% endblock %}

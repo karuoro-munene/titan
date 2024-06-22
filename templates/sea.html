@@ -8,7 +8,7 @@
                 <h3 class="py-4">Sea Shipping</h3>
                 <h4 class="fw-bold">Shipments Every Month from Seattle</h4>
             </div><!-- /.title -->
-            
+
         </div><!-- /.thm-container -->
     </section><!-- /.inner-banner -->
 
@@ -28,7 +28,8 @@
                         <span class="" style="font-weight: bolder!important;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((height x width x length) / 1728) x $30 = Charges</span>
                     </p>
                     <p class="small-margin thick"><span class="big">.</span> Use our <span class="bg-color-scheme"><a
-                            href="{% url 'pricing' %}#volumetric-weight">Cost Calculator</a> </span> to know the shipping price.
+                            href="{% url 'pricing' %}#volumetric-weight">Cost Calculator</a> </span> to know the
+                        shipping price.
                     </p>
                     <p class="small-margin thick"><span class="big">.</span><span class="">Packaging service is available</span>,
                         call for details.</p>
@@ -186,4 +187,14 @@
 
     </section><!-- /.you buy - we ship-section -->
     <hr>
+{% endblock %}
+{% block scripts %}
+    <script>
+        $(window).on('load', function () {
+            var myModal = new bootstrap.Modal(document.getElementById("pop-up"), {});
+            window.setTimeout(document.onreadystatechange = function () {
+                myModal.show();
+            }, 2000);
+        });
+    </script>
 {% endblock %}
