@@ -74,10 +74,10 @@
                     </div>
                     <div class="form-group row">
                         <div class="col-sm-12">
-                            <p   id="volumetric-text"></p>
-                            <p  id="actual-text"></p>
-                            <p  id="air-exact-cost"></p>
-                            <p  class="fw-bold" id="air-rounded-cost"></p>
+                            <p id="volumetric-text"></p>
+                            <p id="actual-text"></p>
+                            <p id="air-exact-cost"></p>
+                            <p class="fw-bold" id="air-rounded-cost"></p>
                         </div>
                     </div>
                     <div></div>
@@ -111,7 +111,7 @@
                         </div>
 
                     </form>
-                    
+
                 </div>
                 <div class="col-md-6">
                     <div class="form-group row mb-3">
@@ -166,11 +166,20 @@
             volumetric = parseFloat(volumetric);
             console.log(volumetric)
             var cost;
-            if ((volumetric > weight) || (volumetric == weight)) {
-                cost = volumetric * 8;
+            if (weight < 25) {
+                if ((volumetric > weight) || (volumetric == weight)) {
+                    cost = volumetric * 7;
+                } else {
+                    cost = weight * 7;
+                }
             } else {
-                cost = weight * 8;
+                if ((volumetric > weight) || (volumetric == weight)) {
+                    cost = volumetric * 6;
+                } else {
+                    cost = weight * 6;
+                }
             }
+
             $("#volumetric-text").text(`Volumetric weight: ${volumetric} LBs`);
             $("#actual-text").text(`Actual weight: ${weight} LBs`);
             $("#air-exact-cost").text(`Exact charges: $ ${cost.toFixed(2)}`);
