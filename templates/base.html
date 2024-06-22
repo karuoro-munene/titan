@@ -119,9 +119,7 @@
                 <li class="nav-item me-lg-0"><a class="nav-link" href="{% url 'pricing' %}">Cost Calculator</a></li>
                 <li class="nav-item me-lg-0"><a class="nav-link" href="{% url 'what-people-ship' %}">What People
                     Ship</a></li>
-                {% if user.is_authenticated %}
-                    <li class="nav-item me-lg-0"><a class="nav-link" href="{% url 'track-package' %}">Tracking</a></li>
-                {% endif %}
+                <li class="nav-item me-lg-0"><a class="nav-link" href="{% url 'track-package' %}">Tracking</a></li>
                 <li class="nav-item me-lg-0"><span
                         class="nav-link btn text-capitalize bg-color-scheme" id="book-nav" data-bs-toggle="modal"
                         data-bs-target="#book-pickup">Book
@@ -334,7 +332,8 @@
 
             </div>
             <div class="modal-footer border-0">
-                <a type="button" class="btn bg-color-scheme fw-bold btn-block text-capitalize" data-bs-target="#book-pickup" data-bs-toggle="modal" data-bs-dismiss="modal"> Learn More </a>
+                <a type="button" class="btn bg-color-scheme fw-bold btn-block text-capitalize"
+                   data-bs-target="#book-pickup" data-bs-toggle="modal" data-bs-dismiss="modal"> Learn More </a>
             </div>
         </div>
     </div>
@@ -444,7 +443,7 @@
         });
 
     });
-   
+
 
 </script>
 {% block scripts %}
