@@ -9,6 +9,7 @@ urlpatterns = [
     path("cost-calculator", views.pricing, name="pricing"),
     path("what-people-ship", views.whatpeopleship, name="what-people-ship"),
     path("track-your-package", views.trackpackage, name="track-package"),
+    path("maureen", views.maureen, name="maureen"),
     path("ajax/process-book-pickup", views.processbook, name="book-pickup"),
     path("ajax/add-package", views.addpackage, name="add-package"),
     path("ajax/edit-package", views.editpackage, name="edit-package"),

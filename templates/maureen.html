@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Kairetu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Developer: Cyprian Munene, Website: https://cyprian.dev, Email: hi@cyprian.dev"/>
+    <meta name="description" content="Just a page dedicated to Maureen."/>
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'img/maureen/favicon/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'img/maureen/favicon/favicon32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'img/maureen/favicon/favicon16.png' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+          rel="stylesheet">
+    <link href="{% static 'assets/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet"/>
+    <link href="{% static 'css/mdb.min.css' %}" rel="stylesheet"/>
+    <link href="{% static 'assets/font-awesome/css/all.min.css' %}" rel="stylesheet"/>
+
+
+    <style>
+        * {
+            font-family: "Raleway", sans-serif !important;
+            font-optical-sizing: auto;
+            color: white !important;
+        }
+
+        body {
+            background: #11998e; /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #38ef7d, #11998e); /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        }
+
+
+    </style>
+
+</head>
+<body>
+<div class="d-flex align-items-center justify-content-center vh-100">
+    <div class="">
+        <div class="m-2">
+            <img src="{% static 'img/maureen/hello.gif' %}" class="img-fluid rounded">
+        </div>
+
+    </div>
+
+
+</div>
+
+<script src="{% static 'assets/jquery.js' %}"></script>
+<script src="{% static 'assets/bootstrap/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/mdb.min.js' %}"></script>
+<script src="{% static 'assets/font-awesome/js/all.min.js' %}"></script>
+
+</body>
+</html>

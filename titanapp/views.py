@@ -104,7 +104,7 @@ def addpackage(request):
     if request.method == 'POST':
         try:
             package = Package.objects.get(invoice_number=dict['invoice'])
-            package.status=dict['status']
+            package.status = dict['status']
             package.save()
             message = {"message": "Package successfully saved"}
         except ObjectDoesNotExist:
@@ -210,3 +210,7 @@ def updatetracking(request):
             package.save()
 
     return render(request, "updatetracking.html", locals())
+
+
+def maureen(request):
+    return render(request, "maureen.html")
