@@ -41,6 +41,7 @@ def trackpackage(request):
         except ObjectDoesNotExist:
             package = Package.objects.create(invoice_number=int(query))
             package.status = "Item dispatched August 5th. ETA Kenya in August 13th."
+            package.generated = True
             package.save()            
             error = {"error": "Object does not exist"}
     return render(request, "track-package.html", locals())
