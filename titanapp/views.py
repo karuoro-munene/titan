@@ -39,11 +39,14 @@ def trackpackage(request):
         try:
             package = Package.objects.get(invoice_number=int(query))
         except ObjectDoesNotExist:
-            package = Package.objects.create(invoice_number=int(query))
-            package.status = "Item dispatched August 5th. ETA Kenya in August 13th."
-            package.generated = True
-            package.save()            
-            error = {"error": "Object does not exist"}
+            q = int(query)
+            if (q==2688)or(q==2690)or(q==2687)or(q==2686)or(q==2671)or(q==2670)or(q==2663)or(q==2661)or(q==2660)or(q==2655):
+                package = Package.objects.create(invoice_number=int(query))
+                package.status = "Item dispatched August 5th. ETA Kenya in August 13th."
+                package.generated = True
+                package.save()
+            else:
+                error = {"error": "Object does not exist"}
     return render(request, "track-package.html", locals())
 
 
