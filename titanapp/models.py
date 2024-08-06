@@ -34,6 +34,7 @@ class Package(models.Model):
     status = models.CharField(max_length=100, choices=stati, default="Item in US Warehouse")
     created = models.DateTimeField(default=timezone.now)
     updated = models.DateTimeField(default=timezone.now)
+    temp_status =  models.CharField(max_length=100, default="Air dispatched August 5th. ETA Kenya August 15th")
 
     def __str__(self):
         return self.invoice_number
